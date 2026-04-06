@@ -263,6 +263,22 @@
                           '<span class="book-spine-title">' + title + '</span>' +
                           '<span class="book-spine-author">' + author + '</span>' +
                       '</div>';
+                var hasQuotes = b.quotes && b.quotes.length > 0;
+                var quoteHint = hasQuotes
+                    ? '<div class="book-overlay-sub" style="opacity:0.65;margin-top:0.5rem;font-size:0.75rem;">📖 ' + b.quotes.length + ' 条摘抄</div>'
+                    : '';
+                if (hasQuotes) {
+                    return '<a class="book-card" href="book-quotes.html?id=' + b.id + '" aria-label="查看《' + title + '》摘抄">' +
+                        inner +
+                        '<span class="book-status-badge ' + badgeCls + '">' + badge + '</span>' +
+                        '<div class="book-overlay">' +
+                            '<div class="book-overlay-title">' + title + '</div>' +
+                            '<div class="book-overlay-sub">' + author + '</div>' +
+                            (genre ? '<div class="book-overlay-sub" style="opacity:0.5;">' + genre + '</div>' : '') +
+                            quoteHint +
+                        '</div>' +
+                    '</a>';
+                }
                 return '<div class="book-card">' +
                     inner +
                     '<span class="book-status-badge ' + badgeCls + '">' + badge + '</span>' +
