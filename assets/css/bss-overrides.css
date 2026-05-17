@@ -2696,3 +2696,161 @@ body::before {
   font-style: italic;
   font-size: 1.05rem;
 }
+
+/* ========================================
+   Forest Bookshelf — 森林书架专属样式
+   ======================================== */
+
+/* ── Forest Hero Header ── */
+.forest-bookshelf-hero {
+  position: relative;
+  background: #122F0B;
+  padding: 5.5rem 0 5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.forest-hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+}
+.forest-hero-orb.orb-1 {
+  width: 420px; height: 420px;
+  background: #275F3E;
+  top: -120px; left: -100px;
+  opacity: 0.45;
+}
+.forest-hero-orb.orb-2 {
+  width: 320px; height: 320px;
+  background: #44785B;
+  top: 10px; right: -80px;
+  opacity: 0.28;
+}
+.forest-hero-orb.orb-3 {
+  width: 220px; height: 220px;
+  background: #6F9D87;
+  bottom: 10px; left: 42%;
+  opacity: 0.2;
+}
+
+.forest-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #DFF0E4;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0.6rem 0 0.75rem;
+  animation: healingBreath 6s ease-in-out infinite;
+}
+
+.forest-hero-sub {
+  color: rgba(181, 202, 186, 0.7);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* 底部雾气渐变 — 过渡到页面背景 */
+.forest-hero-mist {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, transparent, #EFF5F1);
+  pointer-events: none;
+}
+[data-bs-theme="dark"] .forest-hero-mist {
+  background: linear-gradient(to bottom, transparent, #0C1F09);
+}
+
+/* ── Reading Stats Panel ── */
+.stats-panel {
+  padding: 2rem 0 2.5rem;
+  background: var(--apple-bg);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 740px;
+  margin: 0 auto;
+}
+@media (max-width: 575px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-card {
+  background: var(--apple-card-bg);
+  border: 1px solid var(--apple-border);
+  border-radius: var(--apple-radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--apple-shadow-lg);
+}
+
+.stat-icon {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--apple-green);
+  font-family: var(--font-heading);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.7875rem;
+  color: var(--apple-text-sec);
+  font-weight: 500;
+}
+
+/* ── Shelf Plank — 森林地面质感 ── */
+.shelf-plank {
+  height: 20px;
+  background: linear-gradient(to bottom,
+    #4a6640 0%,
+    #3d5535 6%,
+    #2e4228 18%,
+    #243420 45%,
+    #1c2a18 72%,
+    #172314 88%,
+    #101a0d 100%);
+  border-radius: 0 0 5px 5px;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.32),
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 2px 2px rgba(255, 255, 255, 0.12),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.22);
+  margin-bottom: 0.25rem;
+}
+[data-bs-theme="dark"] .shelf-plank {
+  background: linear-gradient(to bottom,
+    #1e2e1a 0%,
+    #172512 10%,
+    #101c0d 40%,
+    #0c1609 72%,
+    #081007 88%,
+    #050c05 100%);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.55),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 2px 2px rgba(255, 255, 255, 0.05),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.4);
+}

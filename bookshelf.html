@@ -44,14 +44,46 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="bookshelf-page-header fade-in">
-        <div class="container">
-            <span class="section-eyebrow" id="shelf-eyebrow">我的书架</span>
-            <h1 class="bookshelf-page-title mt-2" id="shelf-heading">阅读与写作</h1>
-            <p class="bookshelf-page-sub" id="shelf-sub">博客 · 书籍 · 电影</p>
+    <!-- Forest Bookshelf Hero -->
+    <header class="forest-bookshelf-hero">
+        <div class="forest-hero-orb orb-1"></div>
+        <div class="forest-hero-orb orb-2"></div>
+        <div class="forest-hero-orb orb-3"></div>
+        <div class="container position-relative" style="z-index:1;">
+            <span class="section-eyebrow fade-in" id="shelf-eyebrow">我的书架</span>
+            <h1 class="forest-hero-title fade-in" id="shelf-heading">阅读与写作</h1>
+            <p class="forest-hero-sub fade-in" id="shelf-sub">书籍 · 电影 · 文字</p>
         </div>
+        <div class="forest-hero-mist"></div>
     </header>
+
+    <!-- Reading Stats Panel -->
+    <section class="stats-panel">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">📚</span>
+                    <span class="stat-number" data-stat="read">0</span>
+                    <span class="stat-label" id="stat-read-label">已读书籍</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🌱</span>
+                    <span class="stat-number" data-stat="reading">0</span>
+                    <span class="stat-label" id="stat-reading-label">正在阅读</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🎬</span>
+                    <span class="stat-number" data-stat="movies">0</span>
+                    <span class="stat-label" id="stat-movies-label">看过电影</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">✍️</span>
+                    <span class="stat-number" data-stat="quotes">0</span>
+                    <span class="stat-label" id="stat-quotes-label">书摘收录</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <section class="apple-section apple-section-gray">
@@ -144,26 +176,30 @@
             zh: {
                 langBtn: 'EN', back: '主页',
                 pageTitle: '书架 — July\'s Portfolio',
-                eyebrow: '我的书架', heading: '阅读与写作', sub: '博客 · 书籍 · 电影',
+                eyebrow: '我的书架', heading: '阅读与写作', sub: '书籍 · 电影 · 文字',
                 tabBlog: '个人博客', tabBooks: '阅读书籍', tabMovies: '电影',
                 subtabReading: '在读', subtabRead: '已读',
                 booksReadingLabel: '正在阅读', booksReadLabel: '已读书目',
                 moviesLabel: '电影清单',
                 statusReading: '在读', statusRead: '已读',
                 readMore: '阅读全文 →',
-                copyright: '版权所有 © July 2026'
+                copyright: '版权所有 © July 2026',
+                statRead: '已读书籍', statReading: '正在阅读',
+                statMovies: '看过电影', statQuotes: '书摘收录'
             },
             en: {
                 langBtn: '中文', back: 'Home',
                 pageTitle: 'Bookshelf — July\'s Portfolio',
-                eyebrow: 'My Bookshelf', heading: 'Books & Writings', sub: 'Blog · Books · Movies',
+                eyebrow: 'My Library', heading: 'Books & Writings', sub: 'Books · Films · Words',
                 tabBlog: 'Blog', tabBooks: 'Books', tabMovies: 'Movies',
                 subtabReading: 'Reading', subtabRead: 'Read',
                 booksReadingLabel: 'Currently Reading', booksReadLabel: 'Already Read',
                 moviesLabel: 'Movie List',
                 statusReading: 'Reading', statusRead: 'Read',
                 readMore: 'Read Post →',
-                copyright: 'Copyright © July 2026'
+                copyright: 'Copyright © July 2026',
+                statRead: 'Books Read', statReading: 'Reading Now',
+                statMovies: 'Films Watched', statQuotes: 'Excerpts'
             }
         };
 
@@ -207,6 +243,10 @@
             setT('books-read-label',     tr.booksReadLabel);
             setT('movies-label',         tr.moviesLabel);
             setT('footer-copy',          tr.copyright);
+            setT('stat-read-label',      tr.statRead);
+            setT('stat-reading-label',   tr.statReading);
+            setT('stat-movies-label',    tr.statMovies);
+            setT('stat-quotes-label',    tr.statQuotes);
             renderAll(l);
         }
         langBtn && langBtn.addEventListener('click', function () {
@@ -322,6 +362,47 @@
             renderBlog(l);
             renderBooks(l);
             renderMovies(l);
+        }
+
+        /* ── Reading Stats ── */
+        function computeStats() {
+            var map = {
+                read:    booksData.filter(function(b){ return b.status === 'read'; }).length,
+                reading: booksData.filter(function(b){ return b.status === 'reading'; }).length,
+                movies:  moviesData.length,
+                quotes:  booksData.reduce(function(a, b){ return a + (b.quotes ? b.quotes.length : 0); }, 0)
+            };
+            document.querySelectorAll('.stat-number[data-stat]').forEach(function(el) {
+                el.dataset.target = map[el.dataset.stat] || 0;
+            });
+        }
+
+        function animateStats() {
+            document.querySelectorAll('.stat-number').forEach(function(el) {
+                var target = parseInt(el.dataset.target || 0, 10);
+                var cur = 0;
+                var step = target / (1200 / 16);
+                var timer = setInterval(function() {
+                    cur = Math.min(cur + step, target);
+                    el.textContent = Math.floor(cur);
+                    if (cur >= target) {
+                        el.textContent = target;
+                        clearInterval(timer);
+                    }
+                }, 16);
+            });
+        }
+
+        computeStats();
+        var statsPanel = document.querySelector('.stats-panel');
+        if (statsPanel) {
+            var statsObserver = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) {
+                    animateStats();
+                    statsObserver.disconnect();
+                }
+            }, { threshold: 0.3 });
+            statsObserver.observe(statsPanel);
         }
 
         /* ── Tab switching ── */
