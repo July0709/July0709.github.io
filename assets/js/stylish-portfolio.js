@@ -9,7 +9,7 @@
       langButton: '中文',
       /* Nav */
       navHome: 'Home', navAbout: 'About', navServices: 'Services',
-      navPortfolio: 'Portfolio', navBlog: 'Bookshelf', navContact: 'Contact',
+      navPortfolio: 'Portfolio', navBlog: 'Blog', navContact: 'Contact',
       /* Hero */
       heroEyebrow: 'Southern Medical University',
       heroTitle: 'Self Introduction',
@@ -99,18 +99,16 @@
       labelName: 'Name *', labelEmail: 'Email *',
       labelSubject: 'Subject *', labelMessage: 'Message *',
       contactSubmit: 'Send Message',
-      /* Bookshelf */
-      shelfEyebrow: 'My Bookshelf', shelfHeading: 'Books & Writings',
-      shelfRow1: 'Recent Writings', shelfRow2: 'Currently Reading',
-      shelfRow3: 'Already Read', shelfViewAll: 'View Full Bookshelf →',
-      bookReadMore: 'Read Post →', bookStatusRead: 'Read', bookStatusReading: 'Reading',
+      /* Blog Preview */
+      blogNewsEyebrow: 'Latest Posts', blogNewsHeading: 'Blog',
+      blogViewAll: 'View All Posts →', blogSource: 'Category',
       /* Footer */
       copyright: 'Copyright © July 2026'
     },
     zh: {
       langButton: 'EN',
       navHome: '首页', navAbout: '关于', navServices: '技能',
-      navPortfolio: '作品集', navBlog: '书架', navContact: '联系',
+      navPortfolio: '作品集', navBlog: '博客', navContact: '联系',
       heroEyebrow: '南方医科大学',
       heroTitle: '自我介绍',
       heroSubtitle: 'July',
@@ -194,11 +192,9 @@
       labelName: '姓名 *', labelEmail: '邮箱 *',
       labelSubject: '主题 *', labelMessage: '留言 *',
       contactSubmit: '发送消息',
-      /* 书架 */
-      shelfEyebrow: '我的书架', shelfHeading: '阅读与写作',
-      shelfRow1: '近期文章', shelfRow2: '正在阅读',
-      shelfRow3: '已读书目', shelfViewAll: '查看完整书架 →',
-      bookReadMore: '阅读全文 →', bookStatusRead: '已读', bookStatusReading: '在读',
+      /* 博客预览 */
+      blogNewsEyebrow: '最新文章', blogNewsHeading: '博客',
+      blogViewAll: '查看完整博客 →', blogSource: '分类',
       copyright: '版权所有 © July 2026'
     }
   };
@@ -319,16 +315,12 @@
     /* Footer */
     setText('footer-copy', t.copyright);
 
-    /* Bookshelf preview */
-    setText('shelf-eyebrow', t.shelfEyebrow);
-    setText('shelf-heading', t.shelfHeading);
-    setText('shelf-row1-label', t.shelfRow1);
-    setText('shelf-row2-label', t.shelfRow2);
-    setText('shelf-row3-label', t.shelfRow3);
-    setText('shelf-view-all', t.shelfViewAll);
-    /* Re-render shelf cards in current language */
-    if (typeof getBlogPosts !== 'undefined') renderShelfBlogPosts(lang);
-    if (typeof getBooks !== 'undefined') renderShelfBooks(lang);
+    /* Blog News Preview */
+    setText('blog-news-eyebrow', t.blogNewsEyebrow);
+    setText('blog-news-heading', t.blogNewsHeading);
+    setText('blog-view-all', t.blogViewAll);
+    /* Re-render blog preview list in current language */
+    if (typeof getBlogPosts !== 'undefined') renderBlogNewsPreview(lang);
   }
 
   /* ============================================================
@@ -470,82 +462,56 @@
     });
   }
 
-  /* Build one book card HTML (blog post) */
-  function buildBlogBookCard(post, lang) {
-    var title   = lang === 'zh' ? post.title   : (post.titleEn   || post.title);
-    var excerpt = lang === 'zh' ? post.excerpt : (post.excerptEn || post.excerpt);
-    var btnText = translations[lang].bookReadMore;
-    return '<a class="book-card" href="blog-post.html?id=' + post.id + '" aria-label="' + title + '">' +
-      '<img src="' + post.image + '" alt="' + title + '" class="book-cover-img" loading="lazy">' +
-      '<span class="book-cat-badge">' + post.category + '</span>' +
-      '<div class="book-overlay">' +
-        '<div class="book-overlay-title">' + title + '</div>' +
-        '<div class="book-overlay-sub">' + excerpt + '</div>' +
-        '<span class="book-overlay-btn">' + btnText + '</span>' +
-      '</div>' +
-    '</a>';
-  }
+  /* ── Blog News Preview (homepage) ── */
+  function renderBlogNewsPreview(lang) {
+    var list  = document.getElementById('blog-news-list');
+    var imgEl = document.getElementById('blog-news-img');
+    if (!list) return;
 
-  /* Build one book card HTML (reading list) */
-  function buildBookCard(book, lang) {
-    var title  = lang === 'zh' ? book.title  : (book.titleEn  || book.title);
-    var author = lang === 'zh' ? book.author : (book.authorEn || book.author);
-    var badge  = book.status === 'reading'
-      ? translations[lang].bookStatusReading
-      : translations[lang].bookStatusRead;
-    var badgeCls = book.status === 'reading' ? 'badge-reading' : 'badge-read';
-    var inner = book.cover
-      ? '<img src="' + book.cover + '" alt="' + title + '" class="book-cover-img" loading="lazy">'
-      : '<div class="book-cover-color" style="--book-color:' + book.color + ';">' +
-          '<span class="book-spine-title">' + title + '</span>' +
-          '<span class="book-spine-author">' + author + '</span>' +
-        '</div>';
-    var hasQuotes = book.quotes && book.quotes.length > 0;
-    var overlayExtra = hasQuotes
-      ? '<span class="book-overlay-read-more">' + (lang === 'zh' ? '点击查看摘抄 →' : 'View Excerpts →') + '</span>'
-      : '';
-    var cardInner =
-      inner +
-      '<span class="book-status-badge ' + badgeCls + '">' + badge + '</span>' +
-      '<div class="book-overlay">' +
-        '<div class="book-overlay-title">' + title + '</div>' +
-        '<div class="book-overlay-sub">' + author + '</div>' +
-        overlayExtra +
-      '</div>';
-    if (hasQuotes) {
-      return '<a class="book-card" href="book-quotes.html?id=' + book.id + '" aria-label="' + title + ' — 查看摘抄">' +
-        cardInner +
-      '</a>';
-    }
-    return '<div class="book-card">' + cardInner + '</div>';
-  }
-
-  function renderShelfBlogPosts(lang) {
-    var container = document.getElementById('shelf-blog-posts');
-    if (!container) return;
     var posts = getBlogPosts(4);
-    container.innerHTML = posts.map(function (p) {
-      return buildBlogBookCard(p, lang);
+    if (!posts || !posts.length) return;
+
+    var sourceLabel = translations[lang].blogSource;
+    var activeIndex = 0;
+
+    function setActive(index) {
+      activeIndex = index;
+      list.querySelectorAll('.blog-news-item').forEach(function (el, i) {
+        el.classList.toggle('active', i === index);
+      });
+      if (imgEl && posts[index]) {
+        imgEl.style.opacity = '0';
+        setTimeout(function () {
+          imgEl.src = posts[index].image;
+          imgEl.alt = lang === 'zh' ? posts[index].title : (posts[index].titleEn || posts[index].title);
+          imgEl.style.opacity = '1';
+        }, 150);
+      }
+    }
+
+    list.innerHTML = posts.map(function (p, i) {
+      var title = lang === 'zh' ? p.title : (p.titleEn || p.title);
+      return '<a class="blog-news-item' + (i === 0 ? ' active' : '') +
+        '" href="blog-post.html?id=' + p.id + '" role="listitem">' +
+        '<div class="blog-news-item-title">' + title + '</div>' +
+        '<div class="blog-news-item-source">' + sourceLabel + '：' + p.category + '</div>' +
+        '</a>';
     }).join('');
+
+    /* Set initial image */
+    if (imgEl && posts[0]) {
+      imgEl.src = posts[0].image;
+      imgEl.alt = lang === 'zh' ? posts[0].title : (posts[0].titleEn || posts[0].title);
+    }
+
+    /* Hover: update active state & image (without navigating) */
+    list.querySelectorAll('.blog-news-item').forEach(function (el, i) {
+      el.addEventListener('mouseenter', function () { setActive(i); });
+    });
   }
 
-  function renderShelfBooks(lang) {
-    var reading = document.getElementById('shelf-reading');
-    var read    = document.getElementById('shelf-read');
-    if (reading) {
-      reading.innerHTML = getBooks('reading').map(function (b) {
-        return buildBookCard(b, lang);
-      }).join('');
-    }
-    if (read) {
-      read.innerHTML = getBooks('read').map(function (b) {
-        return buildBookCard(b, lang);
-      }).join('');
-    }
-  }
-
-  if (typeof getBooks !== 'undefined') {
-    renderShelfBooks(currentLang);
+  if (typeof getBlogPosts !== 'undefined') {
+    renderBlogNewsPreview(currentLang);
   }
 
   /* ============================================================
