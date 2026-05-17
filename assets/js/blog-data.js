@@ -86,7 +86,7 @@ var blogPosts = [
     category: "Research",
     date: "2026-03-16",
     author: "July",
-    image: "assets/img/green-02.png",
+    image: "assets/img/green-02.jpg",
     excerpt: "一天做网络分析时有感，成为通才与成为专才，其实并不矛盾...",
     excerptEn: "A thought sparked during a network analysis session — being a generalist and a specialist are not mutually exclusive...",
     content: `
@@ -124,7 +124,7 @@ var blogPosts = [
     category: "Study",
     date: "2026-04-10",
     author: "July",
-    image: "assets/img/green-03.png",
+    image: "assets/img/green-03.jpg",
     excerpt: "寄生虫课程的 PBL 让我印象深刻，从中学到的远不止医学知识本身...",
     excerptEn: "The PBL sessions in our parasitology course left a lasting impression — what I learned went far beyond medical knowledge itself...",
     content: `
