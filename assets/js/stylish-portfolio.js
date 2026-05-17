@@ -12,7 +12,7 @@
       navPortfolio: 'Portfolio', navBlog: 'Blog', navContact: 'Contact',
       /* Hero */
       heroEyebrow: 'Southern Medical University',
-      heroTitle: 'Self Introduction',
+      heroTitle: 'Be a Spring Tree, See Those Spring Mountains',
       heroSubtitle: 'July',
       heroBtn: 'Find Out More',
       /* About */
@@ -110,7 +110,7 @@
       navHome: '首页', navAbout: '关于', navServices: '技能',
       navPortfolio: '作品集', navBlog: '博客', navContact: '联系',
       heroEyebrow: '南方医科大学',
-      heroTitle: '自我介绍',
+      heroTitle: '去做春树，见那春山',
       heroSubtitle: 'July',
       heroBtn: '了解更多',
       aboutEyebrow: '关于我',
