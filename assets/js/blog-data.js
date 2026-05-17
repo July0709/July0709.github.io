@@ -1,146 +1,204 @@
 // Blog posts data
+// ─────────────────────────────────────────────
+// 每篇文章是一个对象，字段说明：
+//   id        — 唯一编号，新增时在最后一篇基础上 +1
+//   title     — 中文标题
+//   titleEn   — 英文标题
+//   category  — 分类，如 "Life" / "Research" / "Study" 等
+//   date      — 发布日期，格式 "YYYY-MM-DD"
+//   author    — 作者名
+//   image     — 封面图路径（放在 assets/img/ 下）
+//   excerpt   — 中文摘要（显示在博客列表页）
+//   excerptEn — 英文摘要
+//   content   — 中文正文（支持 HTML 标签，如 <p> <h2> <blockquote> <em> 等）
+//   contentEn — 英文正文
+// ─────────────────────────────────────────────
+
 var blogPosts = [
+  // ── 文章模板，复制此块新增文章 ──────────────────
+  // {
+  //   id: 5,
+  //   title: "中文标题",
+  //   titleEn: "English Title",
+  //   category: "Life",
+  //   date: "2026-01-01",
+  //   author: "July",
+  //   image: "assets/img/your-image.jpg",
+  //   excerpt: "这里写一句话简介，显示在列表页...",
+  //   excerptEn: "One-sentence description shown on the blog list page...",
+  //   content: `
+  //     <p>正文第一段。</p>
+  //     <h2>小标题</h2>
+  //     <p>正文第二段。</p>
+  //     <blockquote>引用文字</blockquote>
+  //   `,
+  //   contentEn: `
+  //     <p>First paragraph in English.</p>
+  //     <h2>Section Heading</h2>
+  //     <p>Second paragraph.</p>
+  //     <blockquote>A quote.</blockquote>
+  //   `
+  // },
+  // ── 在这里粘贴新文章 ────────────────────────────
+
   {
     id: 1,
-    title: "从9.03km开始2026",
-    titleEn: "Starting 2026 with 9.03 km",
+    title: "旧年致谢",
+    titleEn: "Gratitude to the Past Year",
     category: "Life",
     date: "2026-01-01",
     author: "July",
-    image: "assets/img/life-01.jpg",
-    excerpt: "记录2026年的第一天，新的开始，新的希望...",
-    excerptEn: "Recording the very first day of 2026 — a new beginning, new hopes...",
+    image: "assets/img/green-01.jpg",
+    excerpt: "我不知道未来自己会怎么想，至少现在，我觉得自己是幸运的，能够有幸与优秀的人为伍...",
+    excerptEn: "I don't know how I'll feel in the future — but right now, I feel lucky to have walked alongside exceptional people...",
     content: `
-      <p>新年的第一天去登高，于白云山摩星岭处拥抱整座城市。</p>
-      <p>难忘是白云山入口处满墙铺满的三角梅，那好似象征白云的迎客建筑；</p>
-      <p>是有氧小径处白发老人草编飞鸟，耳旁的哨笛忽得演一番百鸟朝凤；</p>
-      <p>去看山涧处兀自盛开的睡莲，去拥大风吹向我们的"我爱广州"的气球，似春风春草温柔的娇羞。</p>
-      <p>城市被白雾笼罩，又在风的吹动下，映照在我的心房。</p>
-      <p>飞鸟点缀在烟雨花城图之上，古典凉亭同高楼齐色。</p>
-      <p>曲折的九公里，让人印象深刻的除去路上遇到的荡胸亭，一边吟诵"荡胸生曾云，决眦入归鸟"的潇洒之外。</p>
-      <p>览遍众山小后，我们也面临着如何快速下山的问题。</p>
-      <p>停下脚步查攻略地图，最后抵达山脚的欣喜，</p>
-      <p>让我相信柳暗之处会花明，赐予我新一年逢山开路之勇气。</p>
+      <p>我不知道未来自己会怎么想，至少现在，我觉得自己是幸运的，能够有幸与优秀的人为伍，见识到更宽广的世界。</p>
+      <p>在一个有纪念意义的时间点，回望过去的一年，我感念我在学校的所有遇见。这一路上，成败起伏，遇到的好的与不那么好的人，都塑造了这样一个完整的我。</p>
+      <p>犹记得在感谢外研社老师给我机会参加省赛时他回复的：</p>
+      <blockquote>机会是你自己争取的。</blockquote>
+      <p>记得数学建模失利时老师说的：</p>
+      <blockquote>人的快速成长都是在痛定思痛时发生的。</blockquote>
+      <p>记得和生物信息学老师在食堂吃饭时她说的：</p>
+      <blockquote>有些学生没心没肺的，但是你让他慢慢搞一个课题，慢慢的他也搞出来了，所以，把当下过好。</blockquote>
+      <p>记得PBL老师问及我高中是哪所学校时候的：</p>
+      <blockquote>你让我印象很深刻，有不属于大学能培养出来的品质。</blockquote>
+      <p>年轻的时候多尝试，不仅仅是为了有更多的生命体验，而是在与不同的人打交道的过程中，去更好地认识自我。</p>
     `,
     contentEn: `
-      <p>On the first day of the new year, I climbed Baiyun Mountain and embraced the whole city from Moxinglin Peak.</p>
-      <p>Unforgettable: the wall of bougainvillea at the mountain entrance, like a welcoming arch of clouds;</p>
-      <p>an elderly man weaving grass birds along the aerobic trail, his bamboo whistle suddenly performing a symphony of a hundred birds;</p>
-      <p>lotus flowers blooming quietly by the mountain stream; giant "I Love Guangzhou" balloons carried by the wind, gentle and tender like spring grass.</p>
-      <p>The city was veiled in white mist, then reflected in my heart as the wind stirred.</p>
-      <p>Birds dotted the ink-wash cityscape; ancient pavilions stood side by side with modern towers.</p>
-      <p>Along the winding nine kilometres, what stood out most — beyond the "Dangxiong Pavilion" where we recited Du Fu's verses with abandon — was the simple joy of the journey.</p>
-      <p>After surveying all the mountains below, we faced the practical challenge of descending quickly.</p>
-      <p>We stopped to consult maps, found our way, and arrived at the foot of the mountain with a rush of happiness.</p>
-      <p>That feeling made me believe that light always follows darkness — and gifted me the courage to forge my own path in the new year ahead.</p>
+      <p>I don't know how I'll feel about all this in the future — but right now, I feel genuinely lucky. Lucky to have walked alongside exceptional people, and to have glimpsed a world wider than I once imagined.</p>
+      <p>At this meaningful point in time, looking back over the past year, I feel deeply grateful for every encounter at this school. The highs and lows, the people who lifted me and the ones who tested me — all of them shaped the complete person I am today.</p>
+      <p>I still remember thanking my FLTRP teacher for the chance to compete in the provincial competition, and his reply:</p>
+      <blockquote>The opportunity was one you earned yourself.</blockquote>
+      <p>I remember what my teacher said after our mathematical modelling setback:</p>
+      <blockquote>People grow fastest in the moments after they've truly felt the weight of failure.</blockquote>
+      <p>I remember my bioinformatics professor, over lunch in the canteen:</p>
+      <blockquote>Some students seem carefree, but give them a project to work through slowly — and slowly, they figure it out. So: make the most of right now.</blockquote>
+      <p>And I remember my PBL teacher asking which high school I'd attended, then saying:</p>
+      <blockquote>You left a strong impression on me. You have qualities that a university alone can't cultivate.</blockquote>
+      <p>Trying more things when you're young isn't only about accumulating life experience — it's about getting to know yourself better through every different person you meet along the way.</p>
     `
   },
+
   {
     id: 2,
-    title: "主体性与可视化",
-    titleEn: "Agency and Visualization",
+    title: "「通才」与「专才」，其实并不矛盾",
+    titleEn: "Generalist and Specialist Are Not at Odds",
     category: "Research",
-    date: "2026-01-08",
+    date: "2026-03-16",
     author: "July",
-    image: "assets/img/research-01.png",
-    excerpt: "从2025年跨年到2026年的PBL，我收获了什么...",
-    excerptEn: "What I gained from the PBL course that bridged 2025 into 2026...",
+    image: "assets/img/green-02.png",
+    excerpt: "一天做网络分析时有感，成为通才与成为专才，其实并不矛盾...",
+    excerptEn: "A thought sparked during a network analysis session — being a generalist and a specialist are not mutually exclusive...",
     content: `
-    <h2>引言</h2>
-      <p>PBL的wcm老师让我印象挺深刻的，第一节PBL课我作为"主席"需要添加老师微信。</p>
-      <p>当时她掏出了收付款码，我马上说：额不是收款码……</p>
-      <p>她：你不要说出来……</p>
-      <p>她笑得前仰后合，我也是第一次见这么"亲民"的一位老师。</p>
-
-    <h2>主体性</h2>
-      <p>第一节课，老师给我的评价是：July的特点就是很强势，能很快捕捉到别人的意思，甚至比发言人能更加明白他们自己想要表达什么东西。</p>
-      <p>我记得她说</p>
-      <blockquote>强势不一定是一个贬义词</blockquote>
-
-      <p>我想起兼职辅导员说</p>
-      <blockquote>科研需要需要人有主体性</blockquote>
-      <p>我觉得这两句话是相辅相成的，科研需要主体性，而主体性不一定是强势的。</p>
-
-    <h2>学会怎么变成一个Leader</h2>
-      <p>在PBL中，老师让我们轮流当主席，作为主席需要引导讨论，确保每个人都有机会发言，并且把讨论引向正确的方向。</p>
-      <p>其实这个事情本身是很难的，因为你又要掌控时间，又要推进任务。老实说，第一节课我做chairman的时候表面云淡风轻，其实非常紧张，身体微微出汗。</p>
-      <p>但是通过不断的练习，我发现自己慢慢能够更好地掌控讨论的节奏，确保每个人都能参与进来，并且把讨论引向有意义的方向。</p>
-      <p>我觉得这个能力在科研中是非常重要的，因为科研往往需要团队合作，而一个好的leader能够激发团队成员的潜力，推动项目的进展。</p>
-      <p>像一直带我的师姐，和wcm老师，她们都有一个特点，能够清晰地看见别人的优点，并且引导别人看到其他人的优点。</p>
-
-    <h2>可视化</h2>
-    <h3>可视化思维，也可视化进步</h3>
-      <p>PBL结课，老师要求以机制图可视化我们的成果。做出这样的机制图，再来回看PBL，有一种收获满满的感觉。</p>
+      <p>一天做网络分析时有感。</p>
+      <h2>通才 vs 专才</h2>
+      <p>成为 block-shaped generalist，是在各个维度上更好地理解整个领域，能接住项目需求，推动项目落地。但是最忌浮光掠影、囫囵吞枣。</p>
+      <p>而成为 deep specialist，是某一根能力非常强大，能做到顶尖水平，以极致让人眼前一亮，愿意为之停留。</p>
+      <p>更多涉猎才能生产 idea，自己也并非拘泥于细节，不是一定要懂得代码怎么写、R包怎么来的。随着人工智能的高速发展，码农逐渐解放双手，现在的问题在于，怎么看见并提出真实有价值的问题——这就需要更广阔的认知维度，需要更广泛的涉猎。</p>
+      <h2>在探索中完善自己的 Pipeline</h2>
+      <p>但不久前，我也读到一些博客，讲述网络分析为什么做不好、做不深的问题。我觉得我接手了一个分析，我不愿匆匆忙忙，而是想把它做好坐实。在这个探索的过程中，我从一开始找各种代码先跑通 R 包做足可视化工作，到"把单纯的可视化做成一个分析"。</p>
+      <p>我遇到了 species 水平维度太大、自身电脑算力不足问题，思考是否需要预处理数据提前筛选问题，和省医的师兄讨论，知道"网络分析和 cox 差不多"，想到提前过滤流行度和丰度筛选物种。又阅读相关综述，找到 CLR 方法可以解决物种组成性偏差、CLR 的伪计数会对下游分析产生影响。知道手动选取阈值可能说服力不强，于是阅读大子刊文献，看到可以自动选取阈值的解决之道，又补充了随机网络比较等方法。过程中也从单域网络分析，开始做跨域网络分析（分域）、多视角网络分析（分组）。</p>
+      <p>通过知识的扩充，我逐渐补充和完善自己的 Pipeline，虽然知道这套 Pipeline 依然有很多瑕疵，但也渐渐明晰了可以优化改进的方向，也在应用中对整个领域有了更深的体会。</p>
+      <h2>行稳，才能致远</h2>
+      <p>我希望更广泛地涉猎整个领域，但我不会囫囵吞枣地去涉猎。行稳，才能致远。成为"通才"和"专才"，其实并不矛盾。快速了解整个领域的同时，我也希望慢慢打造属于自己的"标签"。</p>
     `,
     contentEn: `
-    <h2>Introduction</h2>
-      <p>My PBL teacher, Professor W, left a strong impression on me. In the very first class, I was assigned as "chairman" and needed to add her on WeChat.</p>
-      <p>She pulled out a payment QR code by mistake. I immediately said: "Wait, that's a payment code…"</p>
-      <p>She replied: "Don't say it out loud…"</p>
-      <p>She burst into laughter, and I realised I had never met such a down-to-earth teacher before.</p>
-
-    <h2>Agency</h2>
-      <p>After the first class, her feedback on me was: "July's defining trait is being assertive — she can quickly grasp what others mean, often understanding a speaker's intent better than they do themselves."</p>
-      <p>I remembered her saying:</p>
-      <blockquote>Being assertive is not necessarily a negative thing.</blockquote>
-      <p>That reminded me of something a part-time counsellor once told me:</p>
-      <blockquote>Research requires people to have genuine agency.</blockquote>
-      <p>I think these two ideas complement each other. Research demands agency, and agency does not have to mean being forceful.</p>
-
-    <h2>Learning to Be a Leader</h2>
-      <p>In PBL, the teacher had us take turns as chairman. The role required guiding discussion, ensuring everyone had a chance to speak, and steering the conversation in a productive direction.</p>
-      <p>It is genuinely hard — you have to manage time while also moving the task forward. Honestly, the first time I served as chairman, I appeared calm on the outside but was quietly nervous, my body slightly sweating.</p>
-      <p>Through repeated practice, I gradually found I could better control the rhythm of discussion, ensure everyone's participation, and guide things toward meaningful conclusions.</p>
-      <p>This skill, I believe, is deeply important in research — teamwork is essential, and a good leader can bring out the potential in every member and drive the project forward.</p>
-      <p>Both my senior mentor and Professor W share a quality: they can clearly see the strengths in others and help people recognise each other's value.</p>
-
-    <h2>Visualization</h2>
-    <h3>Visualise Your Thinking. Visualise Your Progress.</h3>
-      <p>At the end of the PBL course, we were asked to create a mechanism diagram to visualise our findings. Looking back on the whole PBL journey through that diagram gave me a profound sense of accomplishment.</p>
+      <p>A thought sparked during a network analysis session.</p>
+      <h2>Generalist vs. Specialist</h2>
+      <p>Becoming a <em>block-shaped generalist</em> means developing a well-rounded understanding across multiple dimensions of a field — able to receive a project brief and drive it to delivery. The danger is skimming the surface without ever going deep.</p>
+      <p>Becoming a <em>deep specialist</em> means cultivating one extraordinary capability, reaching a level of mastery that surprises people and makes them stop and take notice.</p>
+      <p>Broad exposure is what generates ideas. It doesn't mean you need to know how to write every line of code or build every R package from scratch. As AI accelerates, the bottleneck is shifting — away from solving problems and toward <em>asking the right ones</em>. That requires wider knowledge and broader curiosity.</p>
+      <h2>Building My Own Pipeline Through Exploration</h2>
+      <p>Not long ago, I came across some blog posts discussing why network analyses so often fall short — lacking depth, lacking rigor. I'd taken on an analysis myself, and I didn't want to rush it. I wanted to do it properly.</p>
+      <p>The process evolved: from simply running R packages and producing visualisations, to turning those visualisations into a real analysis. I ran into issues with species-level dimensionality and limited computing power; consulted a senior student at the provincial hospital, who pointed out that "network analysis is a lot like Cox regression"; filtered by prevalence and abundance to reduce species count. I read relevant reviews, discovered CLR transformation as a solution to compositional bias, and learned that CLR's pseudo-counts could affect downstream results. Finding that manually chosen thresholds lacked statistical authority, I studied high-impact journal papers and found automated threshold selection methods, then added random network comparisons. Along the way, I expanded from single-domain to cross-domain and multi-perspective network analyses.</p>
+      <p>Through all of this, my Pipeline gradually took shape. It still has flaws — but the direction for improvement is now clear, and I've developed a much deeper feel for the field through hands-on application.</p>
+      <h2>Move Steadily to Go Far</h2>
+      <p>I want to explore the whole field broadly — but I won't do it carelessly. <em>Move steadily to go far.</em> Being a generalist and being a specialist are not at odds. While building a panoramic view of the field, I also hope to slowly carve out something that is distinctly my own.</p>
     `
   },
+
   {
     id: 3,
-    title: "朋友，原谅我，我不下船了",
-    titleEn: "Friend, Forgive Me — I'm Staying Aboard",
-    category: "Life",
-    date: "2026-01-09",
+    title: "从 PBL 中，我们能学到什么",
+    titleEn: "What Can We Learn from PBL?",
+    category: "Study",
+    date: "2026-04-10",
     author: "July",
-    image: "assets/img/life-02.jpg",
-    excerpt: "考完微生物那天晚上，我看完了海上钢琴师...",
-    excerptEn: "The night after my microbiology exam, I finished watching The Legend of 1900...",
+    image: "assets/img/green-03.png",
+    excerpt: "寄生虫课程的 PBL 让我印象深刻，从中学到的远不止医学知识本身...",
+    excerptEn: "The PBL sessions in our parasitology course left a lasting impression — what I learned went far beyond medical knowledge itself...",
     content: `
-      <p>考完微生物那天晚上，我看完了海上钢琴师。</p>
-      <p>看的过程中更像是在欣赏一部音乐剧，我还专门去找了知网上的影评来看。</p>
-      <p>世界缤纷而喧嚣，做一个纯粹的人。</p>
+      <p>寄生虫课程的 PBL 的 wcm 老师让我印象挺深刻的，第一节 PBL 课我作为"主席"需要添加老师微信。当时她掏出了收付款码，我马上说：额不是收款码……</p>
+      <p>她：你不要说出来……</p>
+      <p>她笑得前仰后合，我也是第一次见这么"亲民"的一位老师。</p>
+      <h2>主体性</h2>
+      <p>第一节课，老师给我的评价是：July 的特点就是很强势，能很快捕捉到别人的意思，甚至比发言人能更加明白他们自己想要表达什么东西。我记得她说，强势不一定是一个贬义词。记得兼职辅导员说过，科研需要人有主体性。我觉得这两句话是相辅相成的，科研需要主体性，而主体性不一定是强势的。PBL 的过程，可以让人学到很多知识以外的东西。</p>
+      <h2>学会怎么变成一个 Leader</h2>
+      <p>在 PBL 中，可以学会怎么变成一个 Leader。寄生虫课程的老师让我们轮流当主席，作为主席需要引导讨论，确保每个人都有机会发言，并且把讨论引向正确的方向。其实这个事情本身是很难的，因为你又要掌控时间，又要推进任务。老实说，第一节课我做 chairman 的时候表面云淡风轻，其实非常紧张，身体微微出汗。</p>
+      <p>但是通过不断的练习，我发现自己慢慢能够更好地掌控讨论的节奏，确保每个人都能参与进来，并且把讨论引向有意义的方向。这个能力在科研以及工作中是非常重要的，因为科研往往需要团队合作，而一个好的 leader 能够激发团队成员的潜力，推动项目的进展。像一直带我的师姐，和 wcm 老师，她们都有一个特点，能够清晰地看见别人的优点，并且引导别人看到其他人的优点。</p>
+      <p>后续我在消化系统的 PBL 上再次担任主席，已经带着之前锻炼出来游刃有余的组织会议技能，赢得了老师和同学的认可。</p>
+      <h2>演讲与表达能力</h2>
+      <p>同时 PBL 可以锻炼演讲和表达能力。我的表达能力是从大一开始锻炼的，记得那时候思政社会实践，两年的时间，三次汇报，算是见证了我逐渐从一个很内向的人变成一个敢于站上台、比较富有激情地去述说自己故事的人。PBL 算是一个十人组会，大家都在 PBL 上轮流汇报，可以学习到其他同学的演讲技巧。我能明显感受到，有好几位同学他们在汇报 PPT 的时候台风更加稳健，也算是一种看见大家的优点、不断学习进步的过程。</p>
+      <h2>提出问题的能力</h2>
+      <p>除此之外，还有提出主要问题和次要问题的能力、PPT 制作与可视化的能力等等。虽然后两者现在已经有了 AI 的强势助力，提出主要问题和次要问题是很关键的——现在我们在人工智能的帮助下解决问题的能力已经越来越强，而提出问题的能力，还相对薄弱。</p>
     `,
     contentEn: `
-      <p>The night after my microbiology exam, I finally finished watching <em>The Legend of 1900</em>.</p>
-      <p>Watching it felt less like cinema and more like attending a live musical. Afterwards, I went looking for film reviews on CNKI to read alongside my own impressions.</p>
-      <p>The world is colourful and noisy. Be a pure person.</p>
+      <p>My PBL teacher in the parasitology course left a strong impression on me. In the very first session, I was assigned as "chairman" and needed to add her on WeChat. She accidentally pulled out her payment QR code. I said immediately: "Wait — that's a payment code…"</p>
+      <p>She replied: "Don't say it out loud…"</p>
+      <p>She burst out laughing — and I realised I'd never met such a wonderfully down-to-earth teacher before.</p>
+      <h2>Agency</h2>
+      <p>After the first class, her feedback on me was: "July's defining trait is being assertive — she can quickly grasp what others mean, often understanding a speaker's intent better than they do themselves." She also said that being assertive isn't necessarily a negative thing. A part-time counsellor once told me that research requires genuine agency. I think these two ideas reinforce each other: research demands agency, and agency doesn't have to mean being forceful. The PBL process teaches you so much beyond medical knowledge itself.</p>
+      <h2>Learning to Be a Leader</h2>
+      <p>PBL teaches you how to lead. Our parasitology teacher had us rotate as chairman. The role required guiding discussion, ensuring everyone had a voice, and steering things in a productive direction. It's genuinely hard — you're managing time and moving the task forward at the same time. Honestly, the first time I served as chairman, I looked calm on the outside but was quietly terrified, my body slightly sweating.</p>
+      <p>Through repeated practice, I gradually found I could better control the pace of discussion, bring everyone in, and guide things toward meaningful conclusions. This skill matters deeply in both research and professional life. A good leader draws out the potential in every team member. Both my senior mentor and Professor W share a particular quality: they can clearly see what's strong in others, and they help people recognise each other's strengths too.</p>
+      <p>When I chaired the PBL session for the digestive system module later on, the skills I'd built up let me handle it with ease — and I received recognition from both the teacher and my classmates.</p>
+      <h2>Presentation and Communication</h2>
+      <p>PBL also sharpens your ability to present and communicate. I started working on public speaking in my first year — through civic engagement presentations, three rounds over two years, I gradually transformed from someone quite introverted into someone willing to stand up on stage and tell my story with genuine energy. PBL functions like a ten-person group meeting where everyone takes turns presenting, giving you a close-up view of each person's presentation style. I could clearly see several classmates developing a steadier, more assured presence at the podium — a constant reminder to notice others' strengths and keep growing.</p>
+      <h2>The Ability to Ask the Right Questions</h2>
+      <p>Beyond all this, PBL also builds skills in framing primary and secondary questions, and in creating effective presentations and visualisations. The latter two now have strong AI support — but the ability to ask the right questions remains critical. As AI continues to supercharge our problem-solving capacity, our ability to <em>formulate</em> the problems in the first place is still lagging behind.</p>
     `
   },
+
   {
     id: 4,
-    title: "站在麓湖的山水画里",
-    titleEn: "Standing Inside Luhu's Ink Painting",
-    category: "Life",
-    date: "2026-01-15",
+    title: "课程推荐与建议：人文与社会医学三",
+    titleEn: "Course Review: Humanities and Social Medicine III",
+    category: "Study",
+    date: "2026-05-17",
     author: "July",
-    image: "assets/img/life-03.png",
-    excerpt: "考完寄生虫那天中午，说走就走的出逃...",
-    excerptEn: "A spontaneous escape the afternoon my parasitology exam ended...",
+    image: "assets/img/green-04.jpg",
+    excerpt: "「读万卷书，行万里路」——这是我对整门课程最深刻的体会...",
+    excerptEn: "\"Read ten thousand books, travel ten thousand miles\" — the phrase that best captures what this course gave me...",
     content: `
-      <p>考完寄生虫那天中午，我说走就走，去了麓湖。</p>
-      <p>站在麓湖的山水画里，感受自然的宁静与美好。</p>
-      <p>那一刻，所有的疲惫都消散了，只剩下内心的平静与满足。</p>
+      <p>"读万卷书，行万里路"，我觉得这句话是我对于整个课程最为深刻的体会。</p>
+      <h2>科技真正融入课堂</h2>
+      <p>第一堂课，了解到老师与时俱进地使用 AI 设计了互动小游戏和智能体的时候，我就对这门课别出心裁的课程安排印象非常深刻。下课时候，还和老师聊及 CC 的使用以及前沿话题，除了"科技改变生活"的直观感受之外，在高老师身上，我看到了一种终身学习的信念——大抵是因为我的父母和一些长辈与高老师年岁相近，但这些高新技术产品于他们而言只是新时代的产物，他们尚不能站在更高的维度去使用和开发这些工具。从第一次课精美的 PPT，到儿童安全防护的交互式游戏、再到两次模拟医患沟通的智能体，老师们将科技真正融入了课程之中，这在之前的课程中，是没有的。</p>
+      <h2>走进自我、走进社会、走进世界</h2>
+      <p>我愿意称这门课为"走进自我、走进社会、走进世界"的一门课程。在这门课程，我走进了老年友好型社区"悦麓居"去了解养老服务，我走进了沙园社区卫生服务中心去了解基层医疗，对这个广袤的社会有了更加丰富的体会。这个高端的养老服务、普遍的家庭医生签约以及智能的基层医疗，在我的家乡是尚没有普及的。假若没有这个课程，或许我也不会去了解和认识这些东西，就像河伯在见到北海若之前谈论天地辽阔是没有意义的一样，人只有更多接触没有了解过的世界，才能有更加全面完整的世界观。</p>
+      <h2>医学生的情商课</h2>
+      <p>这门课程，也可以说是"医学生的情商课"。在早孕少女以及临终关怀的课程之中，我学到的不仅是沟通技巧，还有处事能力。一个重要的观点就是，以后在行医的过程中，很多事情，不是我一个人就能下决定的；我要有团队意识和团队观念，比如早孕少女后续的处理我需要和我的上级去讨论，临终关怀李老伯的方案需要多学科的协作才能进一步制定。在与智能体的切磋过程中，我清晰地发现我打字聊天组织语言的逻辑和思维有了明显提升，对待各种复杂情境心态也更为平和从容。我渐渐地也有一种团队观念，医学人文的沟通技巧也潜移默化地影响了我在日常生活中的为人处世——依据情境，在先"处理情绪、后处理问题"等思维中灵活变通。</p>
+      <h2>团队管理与协作</h2>
+      <p>同时，我也学到了管理团队和组织动员大家的能力。小组作业的完成需要团队协作能力，这种能力也在科研过程中是必不可少的。作为组长，不是大包大揽地去完成任务，而是要看到每个人的优势和弱势灵活分配，并且不断激发成员们对共同事业的热情。我渐渐摆脱了从前小组作业中"一人独角兽"公司般的困境，让大家共同承担公共事业。在科普讲座的过程中，我们小组的 H 同学提出了非常创新的 idea，我提出了一个四平八稳的 idea，我就选择全力支持他创新的想法，全权交给他去组织和规划，自己全力配合他的工作，这样在多线任务并行的时候，每个人也都能为集体贡献力量，也不至于一个任务只压在一个人身上。这种运营团队的智慧，是我学习到的非常珍贵的东西。</p>
+      <h2>建议</h2>
+      <p>整门课程已经是较为完善的体系，如果一定要说建议的话，我有几个不成熟的意见。在实地调研的开展方面，我们小组在前往悦麓居实地调研的时候由于没有学校出面的调研申请，在进入这一老年友好型社区以及拍摄等资料收集方面都有比较多的限制，在后续师弟师妹们开展这一活动的时候，老师是否能够为他们提供一些对接层面的帮助呢？而在智能体训练层面，我在想能不能将智能体转变成实时互动式的，就像临床技能模块一诊断学练习诊断的 SP 一样，或者直接培养学生 SP，有一个实时互动的过程，毕竟 AI 对话还是有一层隔离在的，我们可以反复修改与斟酌自己的答案。</p>
+      <p>最后，再次感谢老师们设计这么丰富、具有人文化成的课程，课程与我交织，融入我的成长。带着这些收获，我会继续稳步前行。</p>
     `,
     contentEn: `
-      <p>The afternoon my parasitology exam ended, I made a spontaneous decision and headed straight to Luhu.</p>
-      <p>Standing inside Luhu's living ink painting, I let the tranquillity and beauty of nature wash over me.</p>
-      <p>In that moment, all the exhaustion dissolved — leaving only a quiet, deep sense of contentment.</p>
+      <p>"Read ten thousand books, travel ten thousand miles" — this proverb captures, better than anything else, what this course meant to me.</p>
+      <h2>Technology Woven Into the Classroom</h2>
+      <p>In the very first class, I learned that the teacher had used AI to design interactive mini-games and intelligent agents, and I was immediately struck by just how inventive the course structure was. After class, we talked about Claude Code and other cutting-edge tools — and beyond the immediate sense of "technology transforming daily life," I saw in Professor Gao something rare: a genuine commitment to lifelong learning. My parents and relatives are around the same age, yet these technologies remain, for them, simply products of a new era — tools they haven't yet learned to use and develop from a higher vantage point. From the beautifully designed slides in session one, to the interactive child-safety game, to two rounds of AI-simulated doctor-patient conversations — the teaching team truly embedded technology into this course in ways I had never seen before.</p>
+      <h2>Walking into the Self, Society, and the World</h2>
+      <p>I would describe this course as "a journey into the self, into society, and into the world." Through it, I visited Yueluju, an age-friendly senior community, to learn about eldercare services. I visited Shayuan Community Health Service Centre to understand primary care. I came away with a much richer sense of this vast society. The premium elder housing, the widespread family doctor contracts, the AI-assisted primary care — none of this has reached my hometown yet. Without this course, I might never have gone looking for it — much like how it was meaningless for the River God to speak of the world's vastness before he had seen the Northern Sea. Only by encountering worlds you have never known can your own worldview become truly whole.</p>
+      <h2>Emotional Intelligence for Medical Students</h2>
+      <p>This course might also be called "an EQ class for medical students." Through sessions on teenage pregnancy and end-of-life care, I learned not only communication skills but also how to navigate difficult situations with wisdom. A key insight was this: in the practice of medicine, many decisions are not mine alone to make. I need team awareness and a team mindset — early pregnancy cases require consultation with supervisors; palliative care plans demand multidisciplinary collaboration. Through my exchanges with the AI agents, I noticed a clear improvement in the way I organise my thoughts and language. My composure in complex situations grew too. And the medical humanities communication skills have quietly shaped how I engage with people in everyday life — learning to "address emotions first, problems second," and applying that flexibly depending on the situation.</p>
+      <h2>Team Leadership and Collaboration</h2>
+      <p>I also developed real skill in team management and mobilisation. Group assignments demand collaborative ability — the same ability that is indispensable in research. As group leader, the role isn't to do everything yourself; it's to see each person's strengths and weaknesses and assign work accordingly, while continuously igniting everyone's enthusiasm for the shared mission. I gradually moved away from the "one-person unicorn startup" trap that had defined my old group-work experience, learning instead to share the load. During our science outreach presentation, classmate H proposed a highly innovative idea while I had put forward a more conventional one. I chose to throw my full support behind H's vision — delegating the organising and planning entirely to him, while I supported his work with everything I had. With multiple tasks running in parallel, everyone could contribute meaningfully, and no single person bore all the weight. That wisdom about running a team is something I will carry with me for a long time.</p>
+      <h2>Suggestions</h2>
+      <p>The course is already a well-developed system, but if I were to offer a few thoughts: for the field visits, our group encountered significant restrictions at Yueluju — access, photography, and data collection were all limited because we had no formal research application from the university. Could the teaching team provide some coordination support for future cohorts? On the AI agent training side, I wonder whether the agents could be made truly real-time and interactive — more like the Standardised Patient (SP) model used in clinical skills modules, or by training student SPs directly. AI chat still carries a layer of distance; we can always revise and re-draft our answers, which a real-time interaction would not allow.</p>
+      <p>Finally, my deepest thanks to the teaching team for designing a course so rich, so humanising, and so full of meaning. It has woven itself into my growth. I will carry everything I've learned here as I continue steadily forward.</p>
     `
   }
+
 ];
 
 // Function to get blog posts (with optional limit)
