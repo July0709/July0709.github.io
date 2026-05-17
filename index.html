@@ -61,7 +61,7 @@
                 <li role="none"><a href="#about" role="menuitem">About</a></li>
                 <li role="none"><a href="#services" role="menuitem">Services</a></li>
                 <li role="none"><a href="#portfolio" role="menuitem">Portfolio</a></li>
-                <li role="none"><a href="bookshelf.html" role="menuitem">Blog</a></li>
+                <li role="none"><a href="#blog-preview" role="menuitem">Blog</a></li>
                 <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
 
@@ -494,33 +494,26 @@
     </section>
 
     <!-- ==============================
-         Bookshelf Preview
+         Blog Preview
          ============================== -->
-    <section id="bookshelf" class="apple-section apple-section-gray fade-in" role="region" aria-labelledby="shelf-heading">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="section-eyebrow" id="shelf-eyebrow">我的书架</span>
-                <h2 class="section-title" id="shelf-heading">阅读与写作</h2>
+    <section id="blog-preview" class="blog-news-section fade-in" role="region" aria-labelledby="blog-news-heading">
+        <div class="blog-news-inner">
+            <!-- Left panel: post list -->
+            <div class="blog-news-left">
+                <div class="blog-news-header">
+                    <span class="blog-news-eyebrow" id="blog-news-eyebrow">最新文章</span>
+                    <h2 class="blog-news-title" id="blog-news-heading">博客</h2>
+                </div>
+                <div class="blog-news-list" id="blog-news-list" role="list">
+                    <!-- Rendered by JS -->
+                </div>
+                <div class="blog-news-actions">
+                    <a class="apple-btn blog-news-btn" href="blog.html" id="blog-view-all">查看完整博客 →</a>
+                </div>
             </div>
-
-            <!-- Row 1: Currently Reading -->
-            <div class="shelf-header mt-4">
-                <span class="shelf-header-icon">📖</span>
-                <span class="shelf-header-title" id="shelf-row2-label">正在阅读</span>
-            </div>
-            <div class="shelf-row" id="shelf-reading"></div>
-            <div class="shelf-plank"></div>
-
-            <!-- Row 3: Already Read (scrollable) -->
-            <div class="shelf-header mt-4">
-                <span class="shelf-header-icon">📚</span>
-                <span class="shelf-header-title" id="shelf-row3-label">已读书目</span>
-            </div>
-            <div class="shelf-row" id="shelf-read"></div>
-            <div class="shelf-plank"></div>
-
-            <div class="text-center mt-5">
-                <a class="apple-btn apple-btn-primary" href="bookshelf.html" id="shelf-view-all" role="button">查看完整书架 →</a>
+            <!-- Right panel: featured image -->
+            <div class="blog-news-right" aria-hidden="true">
+                <img class="blog-news-img" id="blog-news-img" src="" alt="" loading="lazy">
             </div>
         </div>
     </section>
