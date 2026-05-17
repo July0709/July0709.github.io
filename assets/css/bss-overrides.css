@@ -2,36 +2,36 @@
    Apple-Inspired Design System
    ======================================== */
 
-/* --- 基础变量（Art Therapy 艺术疗愈系统）--- */
+/* --- 基础变量（Forest Breath 森林呼吸系统）--- */
 :root {
-  /* 背景色 — 温暖奶油 */
-  --apple-bg:        #F8F3EE;
-  --apple-bg-dark:   #EDE5DA;
-  --apple-white:     #FDFAF6;
-  --apple-black:     #2C2420;
+  /* 背景色 — 雾霭林间 */
+  --apple-bg:        #EFF5F1;
+  --apple-bg-dark:   #E2EDE7;
+  --apple-white:     #F5FAF6;
+  --apple-black:     #122F0B;
 
-  /* 文字色 — 暖棕 */
-  --apple-text:      #3D3028;
-  --apple-text-sec:  #7A6D65;
-  --apple-text-ter:  #A09080;
+  /* 文字色 — 深林绿 */
+  --apple-text:      #1A3A15;
+  --apple-text-sec:  #44785B;
+  --apple-text-ter:  #6F9D87;
 
-  /* 强调色 — 玫瑰尘 (原绿色位置) */
-  --apple-green:     #C07D6E;
-  --apple-green-dark: #A06355;
+  /* 强调色 — 苍翠绿 */
+  --apple-green:     #275F3E;
+  --apple-green-dark: #122F0B;
 
   /* 辅助强调色 */
-  --healing-sage:    #7A9E8A;
-  --healing-lavender:#A89BC5;
-  --healing-rose-pale: #F0D6CC;
+  --healing-sage:    #44785B;
+  --healing-lavender:#6F9D87;
+  --healing-rose-pale: #B5CABA;
 
   /* 边框 / 卡片 / 导航 */
-  --apple-border:    rgba(179, 143, 120, 0.2);
-  --apple-card-bg:   #FDFAF6;
-  --apple-nav-bg:    rgba(253, 250, 246, 0.88);
+  --apple-border:    rgba(68, 120, 91, 0.2);
+  --apple-card-bg:   #F5FAF6;
+  --apple-nav-bg:    rgba(239, 245, 241, 0.88);
 
-  /* 阴影 — 暖调 */
-  --apple-shadow:    0 4px 24px rgba(120, 85, 65, 0.1);
-  --apple-shadow-lg: 0 12px 40px rgba(120, 85, 65, 0.14);
+  /* 阴影 — 林深调 */
+  --apple-shadow:    0 4px 24px rgba(18, 47, 11, 0.1);
+  --apple-shadow-lg: 0 12px 40px rgba(18, 47, 11, 0.14);
 
   /* 圆角 — 略有机 */
   --apple-radius:    20px;
@@ -44,20 +44,20 @@
 }
 
 [data-bs-theme="dark"] {
-  --apple-bg:       #1C1713;
-  --apple-bg-dark:  #231E1A;
-  --apple-white:    #231E1A;
-  --apple-text:     #F0EAE2;
-  --apple-text-sec: #C4B8AD;
-  --apple-text-ter: #9E9188;
-  --apple-green:    #D4957F;
-  --apple-green-dark: #B87A65;
-  --healing-sage:   #8FB89E;
-  --healing-lavender:#B8ACD8;
-  --healing-rose-pale: #4A3530;
-  --apple-border:   rgba(220, 195, 175, 0.15);
-  --apple-card-bg:  #241F1A;
-  --apple-nav-bg:   rgba(28, 23, 19, 0.92);
+  --apple-bg:       #0C1F09;
+  --apple-bg-dark:  #122F0B;
+  --apple-white:    #172B13;
+  --apple-text:     #DFF0E4;
+  --apple-text-sec: #B5CABA;
+  --apple-text-ter: #6F9D87;
+  --apple-green:    #6F9D87;
+  --apple-green-dark: #44785B;
+  --healing-sage:   #44785B;
+  --healing-lavender:#6F9D87;
+  --healing-rose-pale: #1C3D18;
+  --apple-border:   rgba(181, 202, 186, 0.15);
+  --apple-card-bg:  #1A3015;
+  --apple-nav-bg:   rgba(12, 31, 9, 0.92);
   --apple-shadow:   0 4px 24px rgba(0, 0, 0, 0.4);
   --apple-shadow-lg:0 12px 40px rgba(0, 0, 0, 0.55);
 }
@@ -474,8 +474,8 @@ body {
   padding: 7rem 0;
 }
 .apple-section-dark {
-  background: #3D3028;
-  color: #F0EAE2;
+  background: #122F0B;
+  color: #DFF0E4;
 }
 .apple-section-gray {
   background: var(--apple-bg);
@@ -510,9 +510,9 @@ body {
   line-height: 1.6;
 }
 
-.apple-section-dark .section-title   { color: #F0EAE2; }
-.apple-section-dark .section-subtitle { color: #C4B8AD; }
-.apple-section-dark .section-eyebrow  { color: #D4957F; }
+.apple-section-dark .section-title   { color: #DFF0E4; }
+.apple-section-dark .section-subtitle { color: #B5CABA; }
+.apple-section-dark .section-eyebrow  { color: #6F9D87; }
 
 /* ========================================
    About Section
@@ -688,7 +688,7 @@ body {
 }
 .blog-card-category {
   display: inline-block;
-  background: rgba(192, 125, 110, 0.1);
+  background: rgba(39, 95, 62, 0.1);
   color: var(--apple-green);
   padding: 3px 10px;
   border-radius: 20px;
@@ -738,12 +738,12 @@ body {
    ======================================== */
 .blog-post-header {
   padding: 5rem 0 3.5rem;
-  background: linear-gradient(160deg, #3D3028 0%, #2C2420 100%);
-  color: #F0EAE2;
+  background: linear-gradient(160deg, #1A3A15 0%, #122F0B 100%);
+  color: #DFF0E4;
   text-align: center;
 }
 [data-bs-theme="dark"] .blog-post-header {
-  background: linear-gradient(160deg, #1C1713 0%, #110D0A 100%);
+  background: linear-gradient(160deg, #0C1F09 0%, #061205 100%);
 }
 .blog-post-title {
   font-size: clamp(1.75rem, 5vw, 3rem);
@@ -764,10 +764,10 @@ body {
   font-size: 1.0625rem;
   line-height: 2.0;
   color: var(--apple-text);
-  background: #faf8f4;
+  background: #f0f7f3;
 }
 [data-bs-theme="dark"] .blog-post-content {
-  background: #1a1915;
+  background: #0c1f09;
 }
 .blog-post-content h2 {
   font-family: var(--font-heading);
@@ -807,18 +807,18 @@ body {
   display: block;
 }
 .blog-post-content blockquote {
-  border-left: 2px solid #b5926a;
+  border-left: 2px solid #44785B;
   margin: 2.5rem 0;
   padding: 0.75rem 2rem;
   font-style: italic;
-  color: #8b7355;
-  background: rgba(181, 146, 106, 0.06);
+  color: #275F3E;
+  background: rgba(68, 120, 91, 0.06);
   border-radius: 0 8px 8px 0;
   line-height: 1.9;
 }
 [data-bs-theme="dark"] .blog-post-content blockquote {
-  background: rgba(181, 146, 106, 0.08);
-  color: #c4a882;
+  background: rgba(68, 120, 91, 0.08);
+  color: #6F9D87;
 }
 .blog-post-content code {
   background: var(--apple-bg);
@@ -839,19 +839,19 @@ body {
    CTA Section
    ======================================== */
 .cta-section {
-  background: linear-gradient(160deg, #EDE0D4 0%, #D4C0B0 40%, #C9AFA0 100%);
-  color: #3D3028;
+  background: linear-gradient(160deg, #D4E8DA 0%, #B5CABA 40%, #9BBFB0 100%);
+  color: #1A3A15;
   padding: 5rem 0;
   text-align: center;
 }
-.cta-section .section-title { color: #3D3028; }
-.cta-section .section-subtitle { color: #7A6D65; }
+.cta-section .section-title { color: #1A3A15; }
+.cta-section .section-subtitle { color: #44785B; }
 [data-bs-theme="dark"] .cta-section {
-  background: linear-gradient(160deg, #2C2420 0%, #1C1713 100%);
-  color: #F0EAE2;
+  background: linear-gradient(160deg, #172B13 0%, #0C1F09 100%);
+  color: #DFF0E4;
 }
-[data-bs-theme="dark"] .cta-section .section-title { color: #F0EAE2; }
-[data-bs-theme="dark"] .cta-section .section-subtitle { color: #C4B8AD; }
+[data-bs-theme="dark"] .cta-section .section-title { color: #DFF0E4; }
+[data-bs-theme="dark"] .cta-section .section-subtitle { color: #B5CABA; }
 
 /* ========================================
    Contact Section
@@ -876,7 +876,7 @@ body {
 }
 .apple-form .form-control:focus {
   border-color: var(--apple-green);
-  box-shadow: 0 0 0 3px rgba(192, 125, 110, 0.22);
+  box-shadow: 0 0 0 3px rgba(39, 95, 62, 0.22);
   background: var(--apple-card-bg);
   color: var(--apple-text);
   outline: none;
@@ -902,18 +902,18 @@ body {
    Footer
    ======================================== */
 .apple-footer {
-  background: #2C2420;
-  color: #C4B8AD;
+  background: #122F0B;
+  color: #B5CABA;
   padding: 2.5rem 0;
   text-align: center;
   font-size: 0.8125rem;
 }
 .apple-footer a {
-  color: #C4B8AD;
+  color: #B5CABA;
   text-decoration: none;
   transition: color 0.2s ease;
 }
-.apple-footer a:hover { color: #F0EAE2; }
+.apple-footer a:hover { color: #DFF0E4; }
 .apple-footer-links {
   display: flex;
   justify-content: center;
@@ -928,15 +928,15 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(196, 184, 173, 0.3);
-  color: #C4B8AD;
+  border: 1px solid rgba(181, 202, 186, 0.3);
+  color: #B5CABA;
   font-size: 1rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 .social-icon:hover {
-  border-color: rgba(192, 125, 110, 0.6);
-  color: #D4957F;
+  border-color: rgba(39, 95, 62, 0.6);
+  color: #6F9D87;
 }
 
 /* ========================================
@@ -958,26 +958,26 @@ body {
    Dark mode refinements
    ======================================== */
 [data-bs-theme="dark"] .feature-card {
-  background: #1c1c1e;
-  border-color: rgba(255, 255, 255, 0.08);
+  background: #172B13;
+  border-color: rgba(181, 202, 186, 0.1);
 }
 [data-bs-theme="dark"] .blog-card {
-  background: #1c1c1e;
-  border-color: rgba(255, 255, 255, 0.08);
+  background: #172B13;
+  border-color: rgba(181, 202, 186, 0.1);
 }
 [data-bs-theme="dark"] .apple-form .form-control {
-  background: #1c1c1e;
-  border-color: rgba(255, 255, 255, 0.15);
-  color: #f5f5f7;
+  background: #172B13;
+  border-color: rgba(181, 202, 186, 0.18);
+  color: #DFF0E4;
 }
 [data-bs-theme="dark"] .apple-form .form-control:focus {
-  background: #2c2c2e;
+  background: #1E3A18;
 }
 [data-bs-theme="dark"] .portfolio-github-img {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(181, 202, 186, 0.12);
 }
 [data-bs-theme="dark"] .apple-section-white {
-  background: #1C1713;
+  background: #0C1F09;
 }
 
 /* ========================================
@@ -1077,7 +1077,7 @@ body {
   position: absolute;
   inset: -10px;
   border-radius: 44px;
-  border: 1.5px dashed rgba(192, 125, 110, 0.3);
+  border: 1.5px dashed rgba(39, 95, 62, 0.3);
   animation: rotateRing 24s linear infinite;
   z-index: 0;
 }
@@ -1086,7 +1086,7 @@ body {
   position: absolute;
   inset: -24px;
   border-radius: 56px;
-  border: 1px dashed rgba(168, 155, 197, 0.2);
+  border: 1px dashed rgba(111, 157, 135, 0.2);
   animation: rotateRing 36s linear infinite reverse;
   z-index: 0;
 }
@@ -1118,9 +1118,9 @@ body {
 }
 .skill-tag {
   display: inline-block;
-  background: rgba(192, 125, 110, 0.07);
+  background: rgba(39, 95, 62, 0.07);
   color: var(--apple-green);
-  border: 1px solid rgba(192, 125, 110, 0.2);
+  border: 1px solid rgba(39, 95, 62, 0.2);
   border-radius: 20px;
   padding: 3px 9px;
   font-size: 0.7rem;
@@ -1129,9 +1129,9 @@ body {
   white-space: nowrap;
 }
 [data-bs-theme="dark"] .skill-tag {
-  background: rgba(212, 149, 127, 0.12);
-  border-color: rgba(212, 149, 127, 0.25);
-  color: #D4957F;
+  background: rgba(111, 157, 135, 0.12);
+  border-color: rgba(111, 157, 135, 0.25);
+  color: #6F9D87;
 }
 
 /* ========================================
@@ -1153,7 +1153,7 @@ body {
   inset: 0;
   background: radial-gradient(
     ellipse 65% 70% at 50% 115%,
-    rgba(192, 125, 110, 0.28) 0%,
+    rgba(39, 95, 62, 0.28) 0%,
     transparent 65%
   );
   pointer-events: none;
@@ -1297,9 +1297,9 @@ body {
 /* Date badge */
 .timeline-date-badge {
   display: inline-block;
-  background: rgba(192, 125, 110, 0.1);
+  background: rgba(39, 95, 62, 0.1);
   color: var(--apple-green);
-  border: 1px solid rgba(192, 125, 110, 0.25);
+  border: 1px solid rgba(39, 95, 62, 0.25);
   border-radius: 20px;
   padding: 4px 12px;
   font-size: 0.8125rem;
@@ -1352,7 +1352,7 @@ body {
   margin-bottom: 0;
 }
 .timeline-awards-toggle:hover {
-  background: rgba(192, 125, 110, 0.07);
+  background: rgba(39, 95, 62, 0.07);
   border-color: var(--apple-green);
 }
 .toggle-icon {
@@ -1442,7 +1442,7 @@ body {
   transform: translateX(-50%);
   width: 200px;
   height: 40px;
-  background: radial-gradient(ellipse, rgba(192,125,110,0.35), transparent 70%);
+  background: radial-gradient(ellipse, rgba(39,95,62,0.35), transparent 70%);
   filter: blur(12px);
   pointer-events: none;
 }
@@ -1584,7 +1584,7 @@ body {
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .chip2-toggle-btn:hover {
-  background: rgba(192, 125, 110, 0.12);
+  background: rgba(39, 95, 62, 0.12);
   color: var(--apple-green);
   border-color: var(--apple-green);
 }
@@ -1634,9 +1634,9 @@ body {
 }
 
 /* Per-colour hover states */
-.chip2-zone[data-color="blue"]:hover  { fill: rgba(168,155,197,0.25);  stroke: rgba(168,155,197,0.7);  }
+.chip2-zone[data-color="blue"]:hover  { fill: rgba(111,157,135,0.25);  stroke: rgba(111,157,135,0.7);  }
 .chip2-zone[data-color="green"]:hover { fill: rgba(122,158,138,0.25);  stroke: rgba(122,158,138,0.7);  }
-.chip2-zone[data-color="teal"]:hover  { fill: rgba(192,125,110,0.2); stroke: rgba(192,125,110,0.6); }
+.chip2-zone[data-color="teal"]:hover  { fill: rgba(39,95,62,0.2); stroke: rgba(39,95,62,0.6); }
 .chip2-zone[data-color="pink"]:hover  { fill: rgba(255,45,85,0.15);  stroke: rgba(255,45,85,0.55); }
 .chip2-zone[data-color="red"]:hover   { fill: rgba(255,59,48,0.15);  stroke: rgba(255,59,48,0.55); }
 
@@ -1715,15 +1715,15 @@ body {
 }
 .skill-tab-btn i { font-size: 1rem; }
 .skill-tab-btn:hover {
-  background: rgba(192, 125, 110, 0.06);
+  background: rgba(39, 95, 62, 0.06);
   color: var(--apple-text);
-  border-color: rgba(192, 125, 110, 0.3);
+  border-color: rgba(39, 95, 62, 0.3);
 }
 .skill-tab-btn.active {
   background: var(--apple-green);
   color: #fff;
   border-color: var(--apple-green);
-  box-shadow: 0 4px 14px rgba(192, 125, 110, 0.35);
+  box-shadow: 0 4px 14px rgba(39, 95, 62, 0.35);
 }
 .skill-tab-btn.active i { color: #fff; }
 
@@ -1827,7 +1827,7 @@ body {
   transition: background 0.2s ease, border-color 0.2s ease;
   flex-shrink: 0;
 }
-.viz-btn:hover { background: rgba(192,125,110,0.1); border-color: var(--apple-green); color: var(--apple-green); }
+.viz-btn:hover { background: rgba(39,95,62,0.1); border-color: var(--apple-green); color: var(--apple-green); }
 .viz-dots { display: flex; gap: 6px; }
 .viz-dot {
   width: 7px;
@@ -1881,7 +1881,7 @@ body {
 .web-project-card:hover {
   box-shadow: var(--apple-shadow-lg);
   transform: translateY(-2px);
-  border-color: rgba(192,125,110,0.3);
+  border-color: rgba(39,95,62,0.3);
 }
 .web-project-icon {
   width: 44px;
@@ -1951,8 +1951,8 @@ body {
   max-width: 780px;
   padding: 1.75rem 2.25rem;
   background: linear-gradient(135deg,
-    rgba(192, 125, 110, 0.07) 0%,
-    rgba(168, 155, 197, 0.04) 100%);
+    rgba(39, 95, 62, 0.07) 0%,
+    rgba(111, 157, 135, 0.04) 100%);
   border-left: 3px solid var(--apple-green);
   border-radius: 0 var(--apple-radius) var(--apple-radius) 0;
   text-align: left;
@@ -1986,7 +1986,7 @@ body {
 .acad-pillar:hover {
   transform: translateY(-5px);
   box-shadow: var(--apple-shadow-lg);
-  border-color: rgba(192, 125, 110, 0.35);
+  border-color: rgba(39, 95, 62, 0.35);
 }
 .acad-pillar-icon {
   width: 48px;
@@ -1996,7 +1996,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 1.1rem;
-  background: linear-gradient(135deg, rgba(192,125,110,0.15) 0%, rgba(168,155,197,0.1) 100%);
+  background: linear-gradient(135deg, rgba(39,95,62,0.15) 0%, rgba(111,157,135,0.1) 100%);
 }
 .acad-pillar-icon svg {
   width: 24px;
@@ -2033,9 +2033,9 @@ body {
 .acad-tag {
   display: inline-block;
   padding: 0.35rem 0.9rem;
-  background: rgba(192, 125, 110, 0.08);
+  background: rgba(39, 95, 62, 0.08);
   color: var(--apple-green);
-  border: 1px solid rgba(192, 125, 110, 0.22);
+  border: 1px solid rgba(39, 95, 62, 0.22);
   border-radius: 20px;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -2044,9 +2044,9 @@ body {
   cursor: default;
 }
 .acad-tag:hover {
-  background: rgba(192, 125, 110, 0.16);
+  background: rgba(39, 95, 62, 0.16);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(192, 125, 110, 0.15);
+  box-shadow: 0 4px 12px rgba(39, 95, 62, 0.15);
 }
 
 /* ========================================
@@ -2528,11 +2528,11 @@ body::before {
   display: block;
   height: 60px;
   margin-top: -60px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z' fill='%23F8F3EE'/%3E%3C/svg%3E") center/cover no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z' fill='%23EFF5F1'/%3E%3C/svg%3E") center/cover no-repeat;
   pointer-events: none;
 }
 [data-bs-theme="dark"] .apple-section-gray::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z' fill='%231C1713'/%3E%3C/svg%3E") center/cover no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z' fill='%230C1F09'/%3E%3C/svg%3E") center/cover no-repeat;
 }
 
 /* 呼吸动画 — hero 区域微脉动 */
@@ -2579,12 +2579,12 @@ body::before {
 .apple-btn-primary {
   background: var(--apple-green);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(192, 125, 110, 0.3);
+  box-shadow: 0 4px 16px rgba(39, 95, 62, 0.3);
 }
 .apple-btn-primary:hover {
   background: var(--apple-green-dark);
   color: #fff;
-  box-shadow: 0 6px 20px rgba(192, 125, 110, 0.4);
+  box-shadow: 0 6px 20px rgba(39, 95, 62, 0.4);
   transform: translateY(-1px) scale(1.02);
 }
 
@@ -2599,12 +2599,12 @@ body::before {
 .feature-card:hover,
 .acad-pillar:hover {
   box-shadow: var(--apple-shadow-lg);
-  border-color: rgba(192, 125, 110, 0.3);
+  border-color: rgba(39, 95, 62, 0.3);
 }
 
 /* 暖色 loading spinner */
 .loading-spinner {
-  border-color: rgba(192, 125, 110, 0.2);
+  border-color: rgba(39, 95, 62, 0.2);
   border-top-color: var(--apple-green);
 }
 
@@ -2624,7 +2624,7 @@ body::before {
   width: 320px;
   height: 320px;
   border-radius: 62% 38% 46% 54% / 60% 44% 56% 40%;
-  background: radial-gradient(ellipse, rgba(168,155,197,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(111,157,135,0.08) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -2643,7 +2643,7 @@ body::before {
   width: 280px;
   height: 280px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  background: radial-gradient(ellipse, rgba(192,125,110,0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(39,95,62,0.07) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -2667,26 +2667,26 @@ body::before {
   width: 600px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(192,125,110,0.06) 0%, rgba(168,155,197,0.04) 50%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(39,95,62,0.06) 0%, rgba(111,157,135,0.04) 50%, transparent 70%);
   pointer-events: none;
 }
 #contact .container { position: relative; z-index: 1; }
 
 /* 深色模式 — 有机装饰更深 */
 [data-bs-theme="dark"] #about::after {
-  background: radial-gradient(ellipse, rgba(168,155,197,0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(111,157,135,0.06) 0%, transparent 70%);
 }
 [data-bs-theme="dark"] #services::after {
-  background: radial-gradient(ellipse, rgba(192,125,110,0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(39,95,62,0.05) 0%, transparent 70%);
 }
 
-/* hero overlay 暖化 */
+/* hero overlay 林深化 */
 .masthead::before {
   background: linear-gradient(
     to bottom,
-    rgba(44, 36, 32, 0.3) 0%,
-    rgba(44, 36, 32, 0.1) 50%,
-    rgba(44, 36, 32, 0.5) 100%
+    rgba(18, 47, 11, 0.3) 0%,
+    rgba(18, 47, 11, 0.1) 50%,
+    rgba(18, 47, 11, 0.5) 100%
   );
 }
 
