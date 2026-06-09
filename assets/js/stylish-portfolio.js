@@ -27,7 +27,7 @@
       navServices: 'Research',
       /* Timeline */
       tl1Date: '2025.02 — Present',
-      tl1Org: 'Department of Plastic Surgery · Microbial Big Data Lab',
+      tl1Org: 'SMOOTH · Microbial Big Data Lab',
       tl1Role: 'Core Member | ML · Deep Learning',
       tl1b1: 'Literature review',
       tl1b2: 'UK Biobank (UKB) database structure exploration & research ideation',
@@ -123,7 +123,7 @@
       navServices: '科研',
       /* 时间线 */
       tl1Date: '2025.02 — 至今',
-      tl1Org: '整形外科·微生物大数据课题组',
+      tl1Org: 'SMOOTH·微生物大数据课题组',
       tl1Role: '核心成员 | 机器学习 · 深度学习',
       tl1b1: '文献综述撰写',
       tl1b2: 'UK Biobank（UKB）数据库数据结构深度探索与研究思路积累',
