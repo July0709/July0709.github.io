@@ -17,8 +17,8 @@
       heroBtn: 'Find Out More',
       /* About */
       aboutEyebrow: 'About Me',
-      aboutHeading: 'I am a student from Southern Medical University, majored in clinical medicine.',
-      aboutText: 'Passionate about combining medical knowledge with technology to make a difference in healthcare.',
+      aboutHeading: 'Clinical Medicine 8-year Program at Southern Medical University.',
+      aboutText: 'Curious, forward-looking, and passionate about documentation',
       aboutBtn: 'Who I Am',
       /* Research & Skills */
       servicesEyebrow: 'Experience & Skills',
@@ -28,8 +28,8 @@
       /* Timeline */
       tl1Date: '2025.02 — Present',
       tl1Org: 'Department of Plastic Surgery · Microbial Big Data Lab',
-      tl1Role: 'Core Member | ML · Deep Learning · Skin Microbiome Peptides',
-      tl1b1: 'Literature review on skin microbiome peptides',
+      tl1Role: 'Core Member | ML · Deep Learning',
+      tl1b1: 'Literature review',
       tl1b2: 'UK Biobank (UKB) database structure exploration & research ideation',
       tl1b3: 'R: microbial co-occurrence network analysis & complex statistical modelling',
       tl1b4: 'Python: causal machine learning & deep learning exploration',
@@ -70,7 +70,7 @@
       wg1Title: 'Animal Model', wg2Title: 'Laboratory Operations',
       wt1: 'Mouse Behavioural Tests', wt2: 'Depression Mouse Modelling',
       wt3: 'Model Verification', wt4: 'Odour Collection',
-      wt5: 'Basic Chemistry Experiments', wt6: 'Organic Chemistry Experiments', wt7: 'Biochemistry Experiments',
+      wt5: 'Basic Chemistry Experiments', wt6: 'Organic Chemistry Experiments', wt7: 'Biochemistry Experiments',wt8: 'Physiology Experiments',
       /* Web panel */
       webIntro: 'Building clean, responsive websites using modern web technologies and GitHub Pages.',
       wp1Title: 'The SMOOTH Lab', wp1Desc: 'Research group website — design & deployment',
@@ -89,7 +89,7 @@
       interestsEyebrow: 'Research Interests',
       tag1: 'Skin Microbiome', tag2: 'Causal Machine Learning', tag3: 'Organ-on-a-Chip',
       tag4: 'UK Biobank', tag5: 'Nasopharyngeal Carcinoma', tag6: 'Olfactory Pathway',
-      tag7: 'Microbiome Peptides', tag8: 'Depression Models',
+      tag7: 'Microbiome Metabolites', tag8: 'Depression Models',
       /* CTA */
       ctaHeading: "Let's Connect!",
       ctaBtn1: 'Contact Me', ctaBtn2: 'My GitHub',
@@ -114,8 +114,8 @@
       heroSubtitle: 'July',
       heroBtn: '了解更多',
       aboutEyebrow: '关于我',
-      aboutHeading: '我是南方医科大学临床医学专业的学生。',
-      aboutText: '热衷于将医学知识与技术相结合，为医疗保健领域做出贡献。',
+      aboutHeading: '南方医科大学临床医学八年制专业。',
+      aboutText: '保持敏锐，追逐前沿，热爱记录',
       aboutBtn: '关于我',
       /* 科研与技能 */
       servicesEyebrow: '科研经历与技能',
@@ -124,8 +124,8 @@
       /* 时间线 */
       tl1Date: '2025.02 — 至今',
       tl1Org: '整形外科·微生物大数据课题组',
-      tl1Role: '核心成员 | 机器学习 · 深度学习 · 皮肤微生物肽',
-      tl1b1: '皮肤微生物肽文献综述撰写',
+      tl1Role: '核心成员 | 机器学习 · 深度学习',
+      tl1b1: '文献综述撰写',
       tl1b2: 'UK Biobank（UKB）数据库数据结构深度探索与研究思路积累',
       tl1b3: 'R 语言：微生物共现网络分析与复杂统计建模',
       tl1b4: 'Python：因果机器学习（CausalML）及深度学习探索',
@@ -166,7 +166,7 @@
       wg1Title: '动物模型', wg2Title: '实验室操作',
       wt1: '小鼠行为学', wt2: '抑郁鼠造模',
       wt3: '模型验证', wt4: '气味收集',
-      wt5: '基础化学实验', wt6: '有机化学实验', wt7: '生物化学实验',
+      wt5: '基础化学实验', wt6: '有机化学实验', wt7: '生物化学实验', wt8: '机能实验',
       /* 网站制作面板 */
       webIntro: '擅长使用 HTML/CSS/Bootstrap 与 GitHub Pages 搭建简洁、响应式网站。',
       wp1Title: 'The SMOOTH Lab', wp1Desc: '课题组官网 — 设计与部署',
@@ -184,7 +184,7 @@
       interestsEyebrow: '研究兴趣',
       tag1: '皮肤微生物组', tag2: '因果机器学习', tag3: '器官芯片',
       tag4: 'UK Biobank', tag5: '鼻咽癌', tag6: '嗅觉通路',
-      tag7: '微生物肽', tag8: '抑郁症模型',
+      tag7: '微生物代谢物', tag8: '抑郁症模型',
       ctaHeading: '让我们联系吧！',
       ctaBtn1: '联系我', ctaBtn2: '我的 GitHub',
       contactEyebrow: '保持联系',
@@ -273,7 +273,7 @@
     setText('wetlab-intro', t.wetlabIntro);
     setText('wg1-title', t.wg1Title); setText('wg2-title', t.wg2Title);
     setText('wt1', t.wt1); setText('wt2', t.wt2); setText('wt3', t.wt3); setText('wt4', t.wt4);
-    setText('wt5', t.wt5); setText('wt6', t.wt6); setText('wt7', t.wt7);
+    setText('wt5', t.wt5); setText('wt6', t.wt6); setText('wt7', t.wt7); setText('wt8', t.wt8);
     /* Web panel */
     setText('web-intro', t.webIntro);
     setText('wp1-title', t.wp1Title); setText('wp1-desc', t.wp1Desc);

@@ -27,7 +27,7 @@ This site is where I keep my self-introduction, research journey, project notes,
 - **About / 关于我** — Background at Southern Medical University
 - **Research Journey / 科研经历**
   - Department of Plastic Surgery · Microbial Big Data Lab (2025.02 — Present)
-    *Skin microbiome peptides, UK Biobank, R co-occurrence networks, causal ML, wet-lab behavioural work.*
+    *Skin microbiome, UK Biobank, R co-occurrence networks, causal ML, wet-lab behavioural work.*
   - Southern Organoid Research Group (2023.09 — 2025.02)
     *Organoids, organ-on-a-chip, "Nasal–Brain Pathway" chip design.*
 - **Skills / 技能** — Bioinformatics · Wet Lab · Web Design
