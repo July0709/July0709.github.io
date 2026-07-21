@@ -76,7 +76,7 @@
       wp1Title: 'The SMOOTH Lab', wp1Desc: 'Research group website — design & deployment',
       wp2Title: "July's Portfolio", wp2Desc: 'Personal homepage — this site',
       wp3Title: 'SMOOTH+ Data Summary', wp3Desc: 'Microbiome cohort data summary & visualisation',
-      wp4Title: 'SMU Eight-Year Archive', wp4Desc: '2018–2026 medical learning notes archive',
+      wp4Title: 'SMU Eight-Year Archive', wp4Desc: '8-year MD program (2023–2031) — notes archive, 3 years in',
       /* Portfolio */
       portfolioEyebrow: 'Academic Vision',
       portfolioHeading: 'Research Philosophy',
@@ -174,7 +174,7 @@
       wp1Title: 'The SMOOTH Lab', wp1Desc: '课题组官网 — 设计与部署',
       wp2Title: 'July 的主页', wp2Desc: '本站 — 个人主页',
       wp3Title: 'SMOOTH+ 数据总结', wp3Desc: 'SMOOTH+ 队列菌群数据汇总与可视化',
-      wp4Title: '八年医学学习档案', wp4Desc: '2018–2026 医学学习笔记与资料整理站',
+      wp4Title: '八年医学学习档案', wp4Desc: '八年制医学在读（2023–2031）学习笔记与资料整理站 — 已走过三年',
       portfolioEyebrow: '学术愿景',
       portfolioHeading: '研究理念',
       portfolioSubtitle: '以好奇心为驱动，以证据为引导，致力于将实验室发现转化为临床影响。',
