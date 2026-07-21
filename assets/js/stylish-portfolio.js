@@ -75,6 +75,8 @@
       webIntro: 'Building clean, responsive websites using modern web technologies and GitHub Pages.',
       wp1Title: 'The SMOOTH Lab', wp1Desc: 'Research group website — design & deployment',
       wp2Title: "July's Portfolio", wp2Desc: 'Personal homepage — this site',
+      wp3Title: 'SMOOTH+ Data Summary', wp3Desc: 'Microbiome cohort data summary & visualisation',
+      wp4Title: 'SMU Eight-Year Archive', wp4Desc: '2018–2026 medical learning notes archive',
       /* Portfolio */
       portfolioEyebrow: 'Academic Vision',
       portfolioHeading: 'Research Philosophy',
@@ -171,6 +173,8 @@
       webIntro: '擅长使用 HTML/CSS/Bootstrap 与 GitHub Pages 搭建简洁、响应式网站。',
       wp1Title: 'The SMOOTH Lab', wp1Desc: '课题组官网 — 设计与部署',
       wp2Title: 'July 的主页', wp2Desc: '本站 — 个人主页',
+      wp3Title: 'SMOOTH+ 数据总结', wp3Desc: 'SMOOTH+ 队列菌群数据汇总与可视化',
+      wp4Title: '八年医学学习档案', wp4Desc: '2018–2026 医学学习笔记与资料整理站',
       portfolioEyebrow: '学术愿景',
       portfolioHeading: '研究理念',
       portfolioSubtitle: '以好奇心为驱动，以证据为引导，致力于将实验室发现转化为临床影响。',
@@ -278,6 +282,8 @@
     setText('web-intro', t.webIntro);
     setText('wp1-title', t.wp1Title); setText('wp1-desc', t.wp1Desc);
     setText('wp2-title', t.wp2Title); setText('wp2-desc', t.wp2Desc);
+    setText('wp3-title', t.wp3Title); setText('wp3-desc', t.wp3Desc);
+    setText('wp4-title', t.wp4Title); setText('wp4-desc', t.wp4Desc);
     /* Awards toggle label when open */
     var toggle = document.getElementById('tl2-toggle');
     if (toggle) {
