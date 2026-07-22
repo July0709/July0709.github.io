@@ -5,7 +5,10 @@
       "Bash(cd \"C:/Users/DELL/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/src/ui-ux-pro-max\" && python scripts/search.py \"animation scroll entrance hover\" --domain ux 2>&1 && python scripts/search.py \"portfolio minimal typography\" --domain typography 2>&1)",
       "Bash(python scripts/search.py \"art therapy healing wellness portfolio soft organic nature\" --design-system -p \"July Art Therapy\" -f markdown)",
       "Bash(python scripts/search.py \"organic soft watercolor art healing nature calm\" --domain style -n 3)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(python -m http.server 8080)",
+      "WebFetch(domain:localhost)",
+      "Bash(npx serve *)"
     ]
   }
 }

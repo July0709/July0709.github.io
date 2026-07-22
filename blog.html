@@ -8,6 +8,7 @@
     <meta name="description" content="July 的博客：记录医学、科研与生活的文字。">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="July 的博客 RSS" href="feed.xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;700&display=swap">
@@ -50,6 +51,13 @@
             <span class="section-eyebrow" style="color:#409cff;" id="blog-eyebrow">我的文字</span>
             <h1 class="blog-post-title mt-2" id="blog-heading">博客</h1>
             <p class="blog-post-meta" id="blog-sub">关于医学、科研与生活的思考</p>
+            <p class="mt-2">
+                <a href="feed.xml" target="_blank" rel="noopener"
+                   style="font-size:0.8125rem;color:#b5926a;text-decoration:none;">
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    <span id="rss-link-text">RSS 订阅</span>
+                </a>
+            </p>
         </div>
     </header>
 
@@ -80,6 +88,7 @@
                 eyebrow: '我的文字', heading: '博客',
                 sub: '关于医学、科研与生活的思考',
                 readMore: '阅读全文 →',
+                rss: 'RSS 订阅',
                 copyright: '版权所有 © July 2026'
             },
             en: {
@@ -88,6 +97,7 @@
                 eyebrow: 'My Writings', heading: 'Blog',
                 sub: 'Thoughts on Medicine, Research & Life',
                 readMore: 'Read Post →',
+                rss: 'Subscribe via RSS',
                 copyright: 'Copyright © July 2026'
             }
         };
@@ -122,6 +132,7 @@
             setT('blog-eyebrow', tr.eyebrow);
             setT('blog-heading', tr.heading);
             setT('blog-sub',     tr.sub);
+            setT('rss-link-text', tr.rss);
             setT('footer-copy',  tr.copyright);
             renderPosts(l);
         }

@@ -175,13 +175,20 @@ var blogPosts = [
 
 1. **编辑** `assets/js/blog-data.js`
 2. **保存** 文件
-3. **提交** git：
+3. **更新 RSS 订阅源**（新增 / 修改 / 删除文章后都要跑一次）：
    ```bash
-   git add assets/js/blog-data.js
+   node scripts/generate-feed.js
+   ```
+   这会从 `blog-data.js` 重新生成 `feed.xml`。订阅地址为
+   `https://july0709.github.io/feed.xml`，读者把它添加进 Fluent Reader、
+   Feedly 等 RSS 阅读器即可订阅博客更新。
+4. **提交** git：
+   ```bash
+   git add assets/js/blog-data.js feed.xml
    git commit -m "Add new blog post: 文章标题"
    git push
    ```
-4. **部署** 到 GitHub Pages（通过 PR 合并到 main）
+5. **部署** 到 GitHub Pages（通过 PR 合并到 main）
 
 ## ❗ 常见错误
 
