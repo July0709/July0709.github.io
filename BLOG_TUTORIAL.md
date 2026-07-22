@@ -175,13 +175,12 @@ var blogPosts = [
 
 1. **编辑** `assets/js/blog-data.js`
 2. **保存** 文件
-3. **更新 RSS 订阅源**（新增 / 修改 / 删除文章后都要跑一次）：
-   ```bash
-   node scripts/generate-feed.js
-   ```
-   这会从 `blog-data.js` 重新生成 `feed.xml`。订阅地址为
-   `https://july0709.github.io/feed.xml`，读者把它添加进 Fluent Reader、
-   Feedly 等 RSS 阅读器即可订阅博客更新。
+3. **RSS 订阅源会自动更新**：仓库配置了 GitHub Actions 工作流
+   （`.github/workflows/generate-feed.yml`），只要 `blog-data.js`
+   的改动推送到 main，就会重新生成 `feed.xml` 并自动提交，无需手动操作。
+   订阅地址为 `https://july0709.github.io/feed.xml`，读者把它添加进
+   Fluent Reader、Feedly 等 RSS 阅读器即可订阅博客更新。
+   （如果想在推送前本地预览订阅源，也可以手动跑 `node scripts/generate-feed.js`。）
 4. **提交** git：
    ```bash
    git add assets/js/blog-data.js feed.xml

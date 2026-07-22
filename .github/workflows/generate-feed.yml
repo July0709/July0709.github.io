@@ -1,0 +1,40 @@
+name: Generate RSS feed
+
+# 博客数据变动时自动重新生成 feed.xml 并提交回仓库
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/js/blog-data.js"
+      - "scripts/generate-feed.js"
+  workflow_dispatch: # 允许在 Actions 页面手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  generate-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate feed.xml
+        run: node scripts/generate-feed.js
+
+      - name: Commit and push feed.xml if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.xml
+          if git diff --cached --quiet; then
+            echo "feed.xml unchanged, nothing to commit."
+          else
+            git commit -m "chore: auto-update RSS feed.xml [skip ci]"
+            git push
+          fi
