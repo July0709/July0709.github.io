@@ -85,6 +85,13 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <link>${FEED_LINK}</link>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
     <description>${escapeXml(FEED_DESCRIPTION)}</description>
+    <image>
+      <url>${SITE_URL}/assets/img/feed-icon.png</url>
+      <title>${escapeXml(FEED_TITLE)}</title>
+      <link>${FEED_LINK}</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
     <language>zh-cn</language>
     <lastBuildDate>${lastBuild}</lastBuildDate>
     <pubDate>${latestPost}</pubDate>
