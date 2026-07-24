@@ -101,6 +101,11 @@
       labelName: 'Name *', labelEmail: 'Email *',
       labelSubject: 'Subject *', labelMessage: 'Message *',
       contactSubmit: 'Send Message',
+      formInvalid: 'Please fill in all required fields.',
+      formSending: 'Sending…',
+      formSuccess: 'Thank you! Your message has been sent — I\'ll get back to you soon.',
+      formError: 'Sending failed. Please try again, or email me directly:',
+      formNotConfigured: 'The contact form is not configured yet. Please email me directly:',
       /* Blog Preview */
       blogNewsEyebrow: 'Latest Posts', blogNewsHeading: 'Blog',
       blogViewAll: 'View All Posts →', blogSource: 'Category',
@@ -196,6 +201,11 @@
       labelName: '姓名 *', labelEmail: '邮箱 *',
       labelSubject: '主题 *', labelMessage: '留言 *',
       contactSubmit: '发送消息',
+      formInvalid: '请填写所有必填项。',
+      formSending: '发送中…',
+      formSuccess: '感谢来信！消息已发送，我会尽快回复你。',
+      formError: '发送失败，请重试，或直接给我发邮件：',
+      formNotConfigured: '联系表单尚未配置完成，请直接给我发邮件：',
       /* 博客预览 */
       blogNewsEyebrow: '最新文章', blogNewsHeading: '博客',
       blogViewAll: '查看完整博客 →', blogSource: '分类',
@@ -427,8 +437,14 @@
   });
 
   /* ============================================================
-     Contact form
+     Contact form — 通过 FormSubmit 把留言发送到邮箱
+     配置方法：
+       1. 把下面 CONTACT_EMAIL 改成你的收件邮箱
+       2. 上线后第一次提交时，FormSubmit 会给该邮箱发一封
+          激活确认邮件，点击确认后即永久生效（免费、无需注册）
      ============================================================ */
+  var CONTACT_EMAIL = 'July.Yang.SMU@outlook.com'; // 收件邮箱
+
   var contactForm = document.getElementById('contactForm');
 
   if (contactForm) {
@@ -437,25 +453,62 @@
       event.stopPropagation();
 
       var formStatus = document.getElementById('formStatus');
+      var lang = localStorage.getItem('language') || 'en';
+      var tr = translations[lang] || translations.en;
+
+      function mailtoLink() {
+        if (!CONTACT_EMAIL) return '';
+        return ' <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a>';
+      }
 
       if (!contactForm.checkValidity()) {
         contactForm.classList.add('was-validated');
-        formStatus.innerHTML = '<div class="alert alert-danger mt-2">Please fill in all required fields.</div>';
+        formStatus.innerHTML = '<div class="alert alert-danger mt-2">' + tr.formInvalid + '</div>';
+        return;
+      }
+
+      if (!CONTACT_EMAIL) {
+        formStatus.innerHTML = '<div class="alert alert-warning mt-2">' + tr.formNotConfigured + '</div>';
         return;
       }
 
       var submitBtn = contactForm.querySelector('button[type="submit"]');
       var original = submitBtn.textContent;
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
+      submitBtn.textContent = tr.formSending;
 
-      setTimeout(function () {
-        formStatus.innerHTML = '<div class="alert alert-success mt-2">Thank you! I\'ll get back to you soon.</div>';
-        contactForm.reset();
-        contactForm.classList.remove('was-validated');
-        submitBtn.disabled = false;
-        submitBtn.textContent = original;
-      }, 1500);
+      var data = {
+        name:     document.getElementById('name').value.trim(),
+        email:    document.getElementById('email').value.trim(),
+        subject:  document.getElementById('subject').value.trim(),
+        message:  document.getElementById('message').value.trim(),
+        _subject: '[july0709.github.io] ' + document.getElementById('subject').value.trim(),
+        _replyto: document.getElementById('email').value.trim(),
+        _template: 'table',
+        _captcha: 'false'
+      };
+
+      fetch('https://formsubmit.co/ajax/' + encodeURIComponent(CONTACT_EMAIL), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then(function () {
+          formStatus.innerHTML = '<div class="alert alert-success mt-2">' + tr.formSuccess + '</div>';
+          contactForm.reset();
+          contactForm.classList.remove('was-validated');
+        })
+        .catch(function () {
+          formStatus.innerHTML = '<div class="alert alert-danger mt-2">' + tr.formError + mailtoLink() + '</div>';
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = original;
+        });
     });
   }
 
