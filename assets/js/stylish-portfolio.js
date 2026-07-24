@@ -9,7 +9,7 @@
       langButton: '中文',
       /* Nav */
       navHome: 'Home', navAbout: 'About', navServices: 'Services',
-      navPortfolio: 'Portfolio', navBlog: 'Blog', navContact: 'Contact',
+      navPortfolio: 'Portfolio', navBlog: 'Blog', navFriends: 'Friends', navContact: 'Contact',
       /* Hero */
       heroEyebrow: 'Southern Medical University',
       heroTitle: 'Be a Spring Tree, See Those Spring Mountains',
@@ -110,7 +110,7 @@
     zh: {
       langButton: 'EN',
       navHome: '首页', navAbout: '关于', navServices: '技能',
-      navPortfolio: '作品集', navBlog: '博客', navContact: '联系',
+      navPortfolio: '作品集', navBlog: '博客', navFriends: '友链', navContact: '联系',
       heroEyebrow: '南方医科大学',
       heroTitle: '去做春树，见那春山',
       heroSubtitle: 'July',
@@ -237,7 +237,7 @@
 
     /* Nav links */
     var navLinks = document.querySelectorAll('#nav-menu a');
-    var keys = ['navHome', 'navAbout', 'navServices', 'navPortfolio', 'navBlog', 'navContact'];
+    var keys = ['navHome', 'navAbout', 'navServices', 'navPortfolio', 'navBlog', 'navFriends', 'navContact'];
     navLinks.forEach(function (a, i) { if (keys[i]) a.textContent = t[keys[i]]; });
 
     /* Hero */

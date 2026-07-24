@@ -3016,3 +3016,142 @@ body::before {
     font-size: 1.75rem;
   }
 }
+
+/* ========================================
+   Friends / 友链页
+   ======================================== */
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0.5rem 0 1rem;
+}
+
+.friend-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  background: var(--apple-card-bg);
+  border: 1px solid var(--apple-border);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--apple-text);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.friend-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--apple-shadow, 0 8px 28px rgba(18, 47, 11, 0.12));
+  border-color: #409cff;
+  color: var(--apple-text);
+  text-decoration: none;
+}
+
+.friend-avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: var(--apple-bg-dark);
+}
+
+.friend-avatar-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #409cff, #6f5bff);
+}
+
+.friend-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.friend-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--apple-text);
+}
+
+.friend-desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--apple-text-sec);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.friend-domain {
+  font-size: 0.75rem;
+  color: var(--apple-text-ter);
+}
+
+.friend-visit {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  font-size: 0.75rem;
+  color: #409cff;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.friend-card:hover .friend-visit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.friends-empty {
+  padding: 3rem 1rem;
+  color: var(--apple-text-ter);
+}
+
+.friends-empty i {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.friends-format {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--apple-card-bg);
+  border: 1px solid var(--apple-border);
+  border-radius: 16px;
+}
+
+.friends-format-title {
+  font-weight: 600;
+  color: var(--apple-text);
+  margin-bottom: 0.5rem;
+}
+
+.friends-format ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--apple-text-sec);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 575px) {
+  .friends-grid {
+    grid-template-columns: 1fr;
+  }
+  .friend-visit {
+    opacity: 1;
+    transform: none;
+  }
+}

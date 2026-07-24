@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title id="page-title">友链 — July's Portfolio</title>
+    <meta name="description" content="July 的友情链接：一些我喜欢的网站和朋友。">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;700&display=swap">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/bss-overrides.css">
+</head>
+
+<body id="page-top">
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="apple-nav" role="navigation" aria-label="Main navigation">
+        <div class="apple-nav-inner">
+            <a class="apple-nav-brand" href="index.html">July</a>
+            <div class="apple-nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa fa-moon-o" aria-hidden="true"></i>
+                </button>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+                    <span class="lang-text">EN</span>
+                </button>
+                <a class="apple-btn apple-btn-outline-dark" href="index.html"
+                   style="font-size:0.8125rem;padding:0.3rem 1rem;height:28px;margin-left:0.25rem;">
+                    <i class="fa fa-arrow-left me-1" aria-hidden="true"></i>
+                    <span id="nav-back">首页</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="blog-post-header fade-in">
+        <div class="container">
+            <span class="section-eyebrow" style="color:#409cff;" id="friends-eyebrow">朋友们</span>
+            <h1 class="blog-post-title mt-2" id="friends-heading">友情链接</h1>
+            <p class="blog-post-meta" id="friends-sub">一些我喜欢的网站和人</p>
+        </div>
+    </header>
+
+    <!-- Friend links grid -->
+    <section class="apple-section apple-section-gray">
+        <div class="container">
+            <div class="friends-grid" id="friends-grid" role="list"></div>
+            <div class="friends-empty text-center" id="friends-empty" hidden>
+                <i class="fa fa-link" aria-hidden="true"></i>
+                <p id="friends-empty-text">友链筹备中，欢迎来交换！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to exchange -->
+    <section class="apple-section apple-section-white">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-eyebrow" id="exchange-eyebrow">交换友链</span>
+                <h2 class="section-title" id="exchange-heading">欢迎互换链接</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <p class="section-subtitle" id="exchange-text">
+                        如果你也有一个认真经营的小站，欢迎通过首页的联系表单告诉我你的名字、站点链接和一句话介绍，我会把你加到这里。
+                    </p>
+                    <div class="friends-format">
+                        <div class="friends-format-title" id="exchange-format-title">申请时请附上：</div>
+                        <ul id="exchange-format-list">
+                            <li id="exchange-item-1">站点名称</li>
+                            <li id="exchange-item-2">站点链接（https://）</li>
+                            <li id="exchange-item-3">一句话介绍</li>
+                            <li id="exchange-item-4">头像图片（可选）</li>
+                        </ul>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a class="apple-btn apple-btn-primary" href="index.html#contact" id="exchange-btn">去留言 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="apple-footer" role="contentinfo">
+        <div class="container">
+            <p class="mb-0" id="footer-copy">&copy; July 2026 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/friends-data.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        var t = {
+            zh: {
+                langBtn: 'EN', back: '首页',
+                pageTitle: '友链 — July\'s Portfolio',
+                eyebrow: '朋友们', heading: '友情链接',
+                sub: '一些我喜欢的网站和人',
+                empty: '友链筹备中，欢迎来交换！',
+                visit: '访问站点 →',
+                exchangeEyebrow: '交换友链', exchangeHeading: '欢迎互换链接',
+                exchangeText: '如果你也有一个认真经营的小站，欢迎通过首页的联系表单告诉我你的名字、站点链接和一句话介绍，我会把你加到这里。',
+                formatTitle: '申请时请附上：',
+                formatItems: ['站点名称', '站点链接（https://）', '一句话介绍', '头像图片（可选）'],
+                exchangeBtn: '去留言 →',
+                copyright: '版权所有 © July 2026'
+            },
+            en: {
+                langBtn: '中文', back: 'Home',
+                pageTitle: 'Friends — July\'s Portfolio',
+                eyebrow: 'Friends', heading: 'Friend Links',
+                sub: 'Sites and people I like',
+                empty: 'Friend links coming soon — feel free to swap!',
+                visit: 'Visit →',
+                exchangeEyebrow: 'Link Exchange', exchangeHeading: 'Swap Links With Me',
+                exchangeText: 'If you also run a site you care about, reach out through the contact form on the homepage with your name, URL, and a one-line intro — I\'ll add you here.',
+                formatTitle: 'Please include:',
+                formatItems: ['Site name', 'Site URL (https://)', 'One-line description', 'Avatar image (optional)'],
+                exchangeBtn: 'Say Hello →',
+                copyright: 'Copyright © July 2026'
+            }
+        };
+
+        var lang  = localStorage.getItem('language') || 'zh';
+        var theme = localStorage.getItem('theme')    || 'light';
+        var htmlEl = document.documentElement;
+
+        /* Theme */
+        htmlEl.setAttribute('data-bs-theme', theme);
+        var themeBtn = document.getElementById('theme-toggle');
+        function setThemeIcon(th) {
+            var ic = themeBtn && themeBtn.querySelector('i');
+            if (ic) ic.className = th === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+        }
+        setThemeIcon(theme);
+        themeBtn && themeBtn.addEventListener('click', function () {
+            theme = theme === 'light' ? 'dark' : 'light';
+            htmlEl.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+            setThemeIcon(theme);
+        });
+
+        /* Language */
+        var langBtn = document.getElementById('lang-toggle');
+        function applyLang(l) {
+            var tr = t[l];
+            htmlEl.lang = l === 'zh' ? 'zh-CN' : 'en';
+            document.getElementById('page-title').textContent = tr.pageTitle;
+            if (langBtn) langBtn.querySelector('.lang-text').textContent = tr.langBtn;
+            setT('nav-back',           tr.back);
+            setT('friends-eyebrow',    tr.eyebrow);
+            setT('friends-heading',    tr.heading);
+            setT('friends-sub',        tr.sub);
+            setT('friends-empty-text', tr.empty);
+            setT('exchange-eyebrow',       tr.exchangeEyebrow);
+            setT('exchange-heading',       tr.exchangeHeading);
+            setT('exchange-text',          tr.exchangeText);
+            setT('exchange-format-title',  tr.formatTitle);
+            tr.formatItems.forEach(function (item, i) {
+                setT('exchange-item-' + (i + 1), item);
+            });
+            setT('exchange-btn', tr.exchangeBtn);
+            setT('footer-copy',  tr.copyright);
+            renderFriends(l);
+        }
+        langBtn && langBtn.addEventListener('click', function () {
+            lang = lang === 'zh' ? 'en' : 'zh';
+            localStorage.setItem('language', lang);
+            applyLang(lang);
+        });
+
+        function setT(id, text) {
+            var el = document.getElementById(id);
+            if (el) el.textContent = text;
+        }
+
+        function esc(s) {
+            return String(s).replace(/[&<>"']/g, function (c) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+            });
+        }
+
+        function domainOf(url) {
+            try { return new URL(url).hostname.replace(/^www\./, ''); }
+            catch (e) { return url; }
+        }
+
+        /* Render friend cards */
+        function renderFriends(l) {
+            var grid  = document.getElementById('friends-grid');
+            var empty = document.getElementById('friends-empty');
+            if (!grid) return;
+            var links = getFriendLinks();
+
+            if (!links.length) {
+                grid.innerHTML = '';
+                if (empty) empty.hidden = false;
+                return;
+            }
+            if (empty) empty.hidden = true;
+
+            grid.innerHTML = links.map(function (f) {
+                var name = l === 'zh' ? f.name : (f.nameEn || f.name);
+                var desc = l === 'zh' ? f.desc : (f.descEn || f.desc);
+                var avatarHtml = f.avatar
+                    ? '<img class="friend-avatar" src="' + esc(f.avatar) + '" alt="' + esc(name) + '" loading="lazy">'
+                    : '<span class="friend-avatar friend-avatar-letter" aria-hidden="true">' +
+                      esc(name.trim().charAt(0).toUpperCase()) + '</span>';
+                return '<a class="friend-card" role="listitem" href="' + esc(f.url) + '"' +
+                    ' target="_blank" rel="noopener noreferrer" aria-label="' + esc(name) + '">' +
+                    avatarHtml +
+                    '<span class="friend-info">' +
+                        '<span class="friend-name">' + esc(name) + '</span>' +
+                        '<span class="friend-desc">' + esc(desc) + '</span>' +
+                        '<span class="friend-domain"><i class="fa fa-globe" aria-hidden="true"></i> ' +
+                            esc(domainOf(f.url)) + '</span>' +
+                    '</span>' +
+                    '<span class="friend-visit">' + esc(t[l].visit) + '</span>' +
+                '</a>';
+            }).join('');
+        }
+
+        /* Fade-in */
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.fade-in').forEach(function (el) { obs.observe(el); });
+
+        /* Loading screen */
+        window.addEventListener('load', function () {
+            var ls = document.querySelector('.loading-screen');
+            if (ls) setTimeout(function () { ls.classList.add('hidden'); }, 400);
+        });
+
+        applyLang(lang);
+    })();
+    </script>
+</body>
+
+</html>
