@@ -1,7 +1,7 @@
 // 阅读书目 & 电影清单数据 / Books & Movies Data
 
 /* ============================================================
-   书单 (19 本)
+   书单
    ============================================================ */
 var booksData = [
   // ── 已读 ─────────────────────────────────────────────────────
@@ -107,7 +107,54 @@ var booksData = [
     status: 'read', cover: null, color: '#b8a080',
     genre: '传记', genreEn: 'Biography'
   },
-  // ── 在读 ─────────────────────────────────────────────────────
+  {
+    id: 'b20', title: '青春的梦，在青春做完', titleEn: 'Dreams of Youth, Finished in Youth',
+    author: '苑子文 / 苑子豪', authorEn: 'Yuan Ziwen & Yuan Zihao',
+    status: 'read', cover: null, color: '#e88a6a',
+    genre: '青春文学', genreEn: 'Youth Literature'
+  },
+  {
+    id: 'b21', title: '光阴如绣，蔓草生香', titleEn: 'Time Like Embroidery, Weeds Fragrant',
+    author: '丁立梅', authorEn: 'Ding Limei',
+    status: 'read', cover: null, color: '#7aae8a',
+    genre: '散文随笔', genreEn: 'Essays'
+  },
+  {
+    id: 'b22', title: '你心柔软，却有力量', titleEn: 'Your Heart is Soft, Yet Powerful',
+    author: '林清玄', authorEn: 'Lin Qingxuan',
+    status: 'read', cover: null, color: '#8ec4a0',
+    genre: '散文随笔', genreEn: 'Essays'
+  },
+  {
+    id: 'b23', title: '傅雷家书', titleEn: "Fu Lei's Family Letters",
+    author: '傅雷', authorEn: 'Fu Lei',
+    status: 'read', cover: null, color: '#8c7060',
+    genre: '书信集', genreEn: 'Letters'
+  },
+  {
+    id: 'b24', title: '乡土中国', titleEn: 'From the Soil',
+    author: '费孝通', authorEn: 'Fei Xiaotong',
+    status: 'read', cover: null, color: '#a08060',
+    genre: '社会学', genreEn: 'Sociology'
+  },
+  {
+    id: 'b25', title: '最文摘', titleEn: 'Zui Wenzhai',
+    author: '重庆出版社', authorEn: 'Chongqing Publishing House',
+    status: 'read', cover: null, color: '#d4a060',
+    genre: '文摘杂志', genreEn: 'Digest Magazine'
+  },
+  {
+    id: 'b26', title: '城市画报', titleEn: 'City Pictorial',
+    author: '广东城市画报社', authorEn: 'Guangdong City Pictorial Press',
+    status: 'read', cover: null, color: '#6a8ec4',
+    genre: '生活方式', genreEn: 'Lifestyle'
+  },
+  {
+    id: 'b17', title: '素书', titleEn: 'Su Shu (The Plain Book)',
+    author: '黄石公', authorEn: 'Huang Shigong',
+    status: 'read', cover: null, color: '#c4a44a',
+    genre: '古典哲学', genreEn: 'Classical Philosophy'
+  },
   {
     id: 'b15', title: '自卑与超越', titleEn: 'What Life Could Mean to You',
     author: '阿尔弗雷德·阿德勒', authorEn: 'Alfred Adler',
@@ -133,12 +180,7 @@ var booksData = [
       { id: 'q8', text: '他没有答应，理由是既然都同意遵守规则，他无法理解两个对手如何还能争斗。' }
     ]
   },
-  {
-    id: 'b17', title: '素书', titleEn: 'Su Shu (The Plain Book)',
-    author: '黄石公', authorEn: 'Huang Shigong',
-    status: 'reading', cover: null, color: '#c4a44a',
-    genre: '古典哲学', genreEn: 'Classical Philosophy'
-  },
+  // ── 在读 ─────────────────────────────────────────────────────
   {
     id: 'b18', title: '曾国藩家书', titleEn: "Zeng Guofan's Family Letters",
     author: '曾国藩', authorEn: 'Zeng Guofan',
@@ -150,11 +192,17 @@ var booksData = [
     author: '孙武', authorEn: 'Sun Tzu',
     status: 'reading', cover: null, color: '#6b7a5a',
     genre: '古典哲学', genreEn: 'Classical Philosophy'
+  },
+  {
+    id: 'b27', title: '爱的艺术', titleEn: 'The Art of Loving',
+    author: '艾里希·弗洛姆', authorEn: 'Erich Fromm',
+    status: 'reading', cover: null, color: '#d4705a',
+    genre: '心理学', genreEn: 'Psychology'
   }
 ];
 
 /* ============================================================
-   电影清单 (30 部)
+   电影清单
    ============================================================ */
 var moviesData = [
   { id: 'm1',  title: '泰坦尼克号',     titleEn: 'Titanic',                      year: 1997, cover: null, color: '#4a7fa3' },
@@ -186,7 +234,17 @@ var moviesData = [
   { id: 'm27', title: '疯狂动物城2',    titleEn: 'Zootopia+',                    year: 2022, cover: null, color: '#e89a4a' },
   { id: 'm28', title: '头脑特工队2',    titleEn: 'Inside Out 2',                 year: 2024, cover: null, color: '#e8b040' },
   { id: 'm29', title: '罗马假日',       titleEn: 'Roman Holiday',                year: 1953, cover: null, color: '#b8a06a' },
-  { id: 'm30', title: '机器人总动员',   titleEn: 'WALL·E',                       year: 2008, cover: null, color: '#6a9eb8' }
+  { id: 'm30', title: '机器人总动员',   titleEn: 'WALL·E',                       year: 2008, cover: null, color: '#6a9eb8' },
+  { id: 'm31', title: '哪吒之魔童闹海', titleEn: 'Ne Zha 2',                     year: 2025, cover: null, color: '#d44030' },
+  { id: 'm32', title: '罗小黑战记2',    titleEn: 'The Legend of Hei 2',          year: 2025, cover: null, color: '#3a8e6a' },
+  { id: 'm33', title: '穿普拉达的女王', titleEn: 'The Devil Wears Prada',        year: 2006, cover: null, color: '#8e6a8e' },
+  { id: 'm34', title: '穿普拉达的女王2', titleEn: 'The Devil Wears Prada 2',     year: 2025, cover: null, color: '#a0608e' },
+  { id: 'm35', title: '沙丘',           titleEn: 'Dune',                         year: 2021, cover: null, color: '#c4a86a' },
+  { id: 'm36', title: '热辣滚烫',       titleEn: 'YOLO',                         year: 2024, cover: null, color: '#e85a5a' },
+  { id: 'm37', title: '触不可及',       titleEn: 'Intouchables',                 year: 2011, cover: null, color: '#5a8e8e' },
+  { id: 'm38', title: '摔跤吧！爸爸',   titleEn: 'Dangal',                       year: 2016, cover: null, color: '#c49040' },
+  { id: 'm39', title: '律政俏佳人',     titleEn: 'Legally Blonde',               year: 2001, cover: null, color: '#e86aa0' },
+  { id: 'm40', title: '河边的错误',     titleEn: 'Only the River Flows',         year: 2023, cover: null, color: '#5a6a7a' }
 ];
 
 /* ── 工具函数 ── */
