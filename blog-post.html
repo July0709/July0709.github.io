@@ -54,6 +54,12 @@
     <!-- Post Content -->
     <div class="blog-post-content" id="post-content"></div>
 
+    <!-- Giscus 评论区（评论 + 点赞 reactions） -->
+    <section class="container" style="max-width:760px;padding:1rem 1.25rem 3rem;">
+        <h2 id="comments-title" style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;">评论</h2>
+        <div class="giscus"></div>
+    </section>
+
     <!-- Bottom nav buttons -->
     <section class="apple-section apple-section-gray" style="padding:2.5rem 0;">
         <div class="container text-center d-flex justify-content-center gap-3 flex-wrap">
@@ -76,6 +82,7 @@
     </footer>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="assets/js/blog-data.js"></script>
     <script>
     (function () {
@@ -85,14 +92,22 @@
             zh: {
                 langBtn: 'EN', back: '全部文章',
                 allPosts: '全部文章', home: '主页',
+                comments: '评论',
                 copyright: '版权所有 © July 2026'
             },
             en: {
                 langBtn: '中文', back: 'All Posts',
                 allPosts: 'All Posts', home: 'Home',
+                comments: 'Comments',
                 copyright: 'Copyright © July 2026'
             }
         };
+
+        /* ── Giscus 配置（评论 + reactions 点赞，存于仓库 Discussions）── */
+        var GISCUS_REPO        = 'July0709/July0709.github.io';
+        var GISCUS_REPO_ID     = '1065639084';
+        var GISCUS_CATEGORY    = 'General';
+        var GISCUS_CATEGORY_ID = 'DIC_kwDOP4RcrM4DDy8a';
 
         var lang  = localStorage.getItem('language') || 'zh';
         var theme = localStorage.getItem('theme')    || 'light';
@@ -112,6 +127,7 @@
             htmlEl.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
             setThemeIcon(theme);
+            syncGiscusTheme();
         });
 
         /* ── Language ── */
@@ -124,6 +140,7 @@
             setT('btn-all-posts-label', tr.allPosts);
             setT('btn-home-label',      tr.home);
             setT('footer-copy',         tr.copyright);
+            setT('comments-title',      tr.comments);
             if (currentPost) renderPost(currentPost, l);
         }
         langBtn && langBtn.addEventListener('click', function () {
@@ -164,10 +181,51 @@
                     '<i class="fa fa-calendar" aria-hidden="true"></i> ' + formatDate(post.date) +
                     ' <span class="mx-2">·</span>' +
                     '<i class="fa fa-user" aria-hidden="true"></i> ' + post.author +
+                    ' <span class="mx-2">·</span>' +
+                    '<span id="busuanzi_container_page_pv">' +
+                      '<i class="fa fa-eye" aria-hidden="true"></i> ' +
+                      '<span id="busuanzi_value_page_pv">--</span> ' +
+                      (l === 'zh' ? '次阅读' : 'views') +
+                    '</span>' +
                   '</div>' +
                 '</div>';
 
             document.getElementById('post-content').innerHTML = content;
+        }
+
+        /* ── Giscus 动态加载（按文章 id 区分讨论）── */
+        function giscusTheme() {
+            return htmlEl.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
+        }
+        function loadGiscus(postId) {
+            if (GISCUS_CATEGORY_ID.indexOf('REPLACE_') === 0) return; // 未配置则跳过
+            var s = document.createElement('script');
+            s.src = 'https://giscus.app/client.js';
+            s.setAttribute('data-repo', GISCUS_REPO);
+            s.setAttribute('data-repo-id', GISCUS_REPO_ID);
+            s.setAttribute('data-category', GISCUS_CATEGORY);
+            s.setAttribute('data-category-id', GISCUS_CATEGORY_ID);
+            s.setAttribute('data-mapping', 'specific');
+            s.setAttribute('data-term', postId);
+            s.setAttribute('data-strict', '0');
+            s.setAttribute('data-reactions-enabled', '1');
+            s.setAttribute('data-emit-metadata', '0');
+            s.setAttribute('data-input-position', 'top');
+            s.setAttribute('data-theme', giscusTheme());
+            s.setAttribute('data-lang', lang === 'zh' ? 'zh-CN' : 'en');
+            s.setAttribute('data-loading', 'lazy');
+            s.crossOrigin = 'anonymous';
+            s.async = true;
+            document.querySelector('.giscus').appendChild(s);
+        }
+        function syncGiscusTheme() {
+            var frame = document.querySelector('iframe.giscus-frame');
+            if (frame) {
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme: giscusTheme() } } },
+                    'https://giscus.app'
+                );
+            }
         }
 
         /* ── Load post from URL ── */
@@ -178,6 +236,7 @@
             if (!post) { window.location.href = 'blog.html'; return; }
             currentPost = post;
             applyLang(lang);
+            loadGiscus(postId);
         }
 
         /* ── Loading screen ── */
