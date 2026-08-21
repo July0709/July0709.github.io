@@ -59,10 +59,10 @@
         <!-- 女孩与猫 · 走进书柜 动画 -->
         <div class="anim-stage-wrap">
             <div class="anim-stage" id="anim-stage" aria-hidden="true">
-                <img class="anim-frame" src="assets/anim/frame1.png" alt="">
-                <img class="anim-frame" src="assets/anim/frame2.png" alt="" loading="lazy">
-                <img class="anim-frame" src="assets/anim/frame3.png" alt="" loading="lazy">
-                <img class="anim-frame" src="assets/anim/frame4.png" alt="" loading="lazy">
+                <img class="anim-frame" src="assets/anim/frame1.jpg" alt="">
+                <img class="anim-frame" src="assets/anim/frame2.jpg" alt="" loading="lazy">
+                <img class="anim-frame" src="assets/anim/frame3.jpg" alt="" loading="lazy">
+                <img class="anim-frame" src="assets/anim/frame4.jpg" alt="" loading="lazy">
                 <div class="anim-caption" id="anim-caption"></div>
                 <button class="anim-replay" id="anim-replay" type="button">↻ 重播</button>
             </div>
@@ -460,10 +460,12 @@
         document.querySelectorAll('.fade-in').forEach(function (el) { fadeObs.observe(el); });
 
         /* ── Loading screen ── */
+        var lsEl = document.querySelector('.loading-screen');
+        function hideLoading() { if (lsEl) lsEl.classList.add('hidden'); }
         window.addEventListener('load', function () {
-            var ls = document.querySelector('.loading-screen');
-            if (ls) setTimeout(function () { ls.classList.add('hidden'); }, 400);
+            setTimeout(hideLoading, 400);
         });
+        setTimeout(hideLoading, 2500);   // 兜底：外部资源慢时也不卡住
 
         /* ── Init ── */
         applyLang(lang);

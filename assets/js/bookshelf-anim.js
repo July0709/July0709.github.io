@@ -75,8 +75,8 @@
         return;
     }
 
-    /* 页面加载（含 loading 屏淡出）后启动 */
-    function kickoff() { later(loop, 700); }
-    if (document.readyState === 'complete') kickoff();
-    else window.addEventListener('load', kickoff);
+    /* DOM 就绪后即启动，不等所有资源加载完毕 */
+    function kickoff() { later(loop, 600); }
+    if (document.readyState !== 'loading') kickoff();
+    else document.addEventListener('DOMContentLoaded', kickoff);
 })();
