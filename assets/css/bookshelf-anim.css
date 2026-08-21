@@ -1,0 +1,351 @@
+/* ============================================================
+   Bookshelf Hero Animation — 女孩与猫 · 走进书柜
+   ============================================================ */
+
+.anim-stage-wrap {
+  max-width: 780px;
+  margin: 2.2rem auto 0;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.anim-stage {
+  position: relative;
+  height: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #d9ecb0 0%, #c2e08c 62%, #a5cc6c 100%);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+/* ── 云朵 ── */
+.anim-cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  filter: blur(1px);
+  animation: cloudDrift 26s linear infinite;
+}
+.anim-cloud::before,
+.anim-cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+.anim-cloud.c1 { width: 74px; height: 24px; top: 34px; left: -90px; }
+.anim-cloud.c1::before { width: 34px; height: 34px; top: -16px; left: 12px; }
+.anim-cloud.c1::after  { width: 24px; height: 24px; top: -10px; right: 14px; }
+.anim-cloud.c2 { width: 56px; height: 18px; top: 78px; left: -70px; animation-duration: 34s; animation-delay: -14s; opacity: .8; }
+.anim-cloud.c2::before { width: 26px; height: 26px; top: -12px; left: 10px; }
+.anim-cloud.c2::after  { width: 18px; height: 18px; top: -8px; right: 10px; }
+
+@keyframes cloudDrift {
+  from { transform: translateX(0); }
+  to   { transform: translateX(900px); }
+}
+
+/* ── 地面 ── */
+.anim-ground {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 52px;
+  background: linear-gradient(to bottom, #8fbc5a, #6f9c44);
+  border-top: 3px solid rgba(255, 255, 255, 0.35);
+}
+.anim-ground::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 10px;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.18) 0 14px, transparent 14px 34px);
+}
+
+/* ── 角色通用 ── */
+.anim-no-anim * { transition: none !important; animation: none !important; }
+
+/* ── 女孩 ── */
+.anim-girl {
+  position: absolute;
+  bottom: 46px;
+  left: 8%;
+  width: 96px;
+  height: 172px;
+  transition: left 3s cubic-bezier(.45, .05, .55, 1),
+              transform 1s ease,
+              opacity .8s ease;
+  will-change: left, transform, opacity;
+  z-index: 3;
+}
+.anim-girl-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.anim-girl-head {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 66px; height: 66px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  background: #b5d56a;
+}
+.anim-girl-head img { width: 100%; height: 100%; display: block; }
+.anim-girl-body {
+  position: absolute;
+  top: 60px; left: 50%;
+  transform: translateX(-50%);
+  width: 52px; height: 66px;
+  background: linear-gradient(to bottom, #f7fafc, #e3ebf2);
+  border: 2px solid rgba(44, 44, 44, 0.35);
+  border-radius: 16px 16px 10px 10px;
+}
+.anim-girl-leg {
+  position: absolute;
+  top: 122px;
+  width: 16px; height: 44px;
+  background: #5b4a42;
+  border: 2px solid rgba(44, 44, 44, 0.3);
+  border-radius: 8px;
+  transform-origin: top center;
+}
+.anim-girl-leg.l { left: 28px; }
+.anim-girl-leg.r { left: 52px; }
+.anim-girl-arm {
+  position: absolute;
+  top: 72px; left: 58%;
+  width: 36px; height: 13px;
+  background: #eef4f8;
+  border: 2px solid rgba(44, 44, 44, 0.3);
+  border-radius: 8px;
+  transform-origin: left center;
+  transform: rotate(-8deg);
+  transition: transform .6s ease;
+}
+
+/* 走路姿态 */
+.anim-stage[data-phase="walk"] .anim-girl-leg.l { animation: legSwing .42s ease-in-out infinite alternate; }
+.anim-stage[data-phase="walk"] .anim-girl-leg.r { animation: legSwing .42s ease-in-out infinite alternate-reverse; }
+.anim-stage[data-phase="walk"] .anim-girl-inner { animation: walkBob .42s ease-in-out infinite alternate; }
+.anim-stage[data-phase="walk"] .anim-girl-arm   { transform: rotate(6deg); }
+
+@keyframes legSwing {
+  from { transform: rotate(22deg); }
+  to   { transform: rotate(-22deg); }
+}
+@keyframes walkBob {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-5px); }
+}
+
+/* 抱猫 / 抚摸姿态 */
+.anim-stage[data-phase="cuddle"] .anim-girl { transform: translateY(5px); }
+.anim-stage[data-phase="cuddle"] .anim-girl-head { animation: headTilt 2.2s ease-in-out infinite; }
+.anim-stage[data-phase="cuddle"] .anim-girl-arm  { transform: rotate(-24deg); animation: petArm 1.1s ease-in-out infinite alternate; }
+.anim-stage[data-phase="release"] .anim-girl-arm { transform: rotate(26deg); }
+
+@keyframes headTilt {
+  0%, 100% { transform: translateX(-50%) rotate(-5deg); }
+  50%      { transform: translateX(-50%) rotate(5deg); }
+}
+@keyframes petArm {
+  from { transform: rotate(-24deg) translateY(0); }
+  to   { transform: rotate(-24deg) translateY(4px); }
+}
+
+/* ── 猫咪 ── */
+.anim-cat {
+  position: absolute;
+  bottom: 100px;
+  left: 12.5%;
+  width: 74px;
+  height: 58px;
+  transition: left .9s ease, bottom .85s cubic-bezier(.34, 1.4, .64, 1);
+  z-index: 4;
+}
+.anim-cat-body {
+  position: absolute;
+  bottom: 0; left: 8px;
+  width: 54px; height: 30px;
+  background: linear-gradient(to bottom, #a67c55, #8a6642);
+  border: 2px solid rgba(44, 44, 44, 0.35);
+  border-radius: 50% 50% 45% 45% / 70% 70% 40% 40%;
+}
+.anim-cat-head {
+  position: absolute;
+  top: 0; left: 22px;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  background: #b5d56a;
+}
+.anim-cat-head img { width: 100%; height: 100%; display: block; }
+.anim-cat-tail {
+  position: absolute;
+  bottom: 6px; left: 0;
+  width: 26px; height: 9px;
+  background: #8a6642;
+  border: 2px solid rgba(44, 44, 44, 0.3);
+  border-radius: 6px;
+  transform-origin: right center;
+  animation: tailWag 1.4s ease-in-out infinite alternate;
+}
+@keyframes tailWag {
+  from { transform: rotate(14deg); }
+  to   { transform: rotate(-22deg); }
+}
+
+/* 落地后的位置 */
+.anim-stage[data-phase="release"] .anim-cat,
+.anim-stage[data-phase="walk"] .anim-cat,
+.anim-stage[data-phase="enter"] .anim-cat,
+.anim-stage[data-phase="inside"] .anim-cat {
+  bottom: 46px;
+  left: 13%;
+}
+.anim-stage[data-phase="walk"] .anim-cat,
+.anim-stage[data-phase="enter"] .anim-cat,
+.anim-stage[data-phase="inside"] .anim-cat {
+  animation: sitSway 2.4s ease-in-out infinite;
+}
+@keyframes sitSway {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(2.5deg); }
+}
+
+/* ── 爱心 ── */
+.anim-heart {
+  position: absolute;
+  font-size: 20px;
+  color: #e2556d;
+  opacity: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  pointer-events: none;
+  z-index: 5;
+}
+.anim-heart.h1 { left: 17%; bottom: 162px; }
+.anim-heart.h2 { left: 21%; bottom: 154px; font-size: 15px; }
+.anim-heart.h3 { left: 13.5%; bottom: 156px; font-size: 13px; }
+.anim-stage[data-phase="cuddle"] .anim-heart { animation: heartFloat 1.8s ease-out infinite; }
+.anim-stage[data-phase="cuddle"] .anim-heart.h2 { animation-delay: .55s; }
+.anim-stage[data-phase="cuddle"] .anim-heart.h3 { animation-delay: 1.1s; }
+@keyframes heartFloat {
+  0%   { opacity: 0; transform: translateY(6px) scale(.6); }
+  25%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-34px) scale(1.15) rotate(10deg); }
+}
+
+/* ── 书柜 ── */
+.anim-bookcase {
+  position: absolute;
+  right: 5%;
+  bottom: 40px;
+  width: 158px;
+  height: 216px;
+  background: linear-gradient(to bottom, #8a6844, #6f5233);
+  border: 6px solid #573f24;
+  border-radius: 8px 8px 4px 4px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  padding: 8px 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.anim-shelf {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  border-bottom: 5px solid #573f24;
+  padding: 0 2px;
+}
+.anim-book {
+  border-radius: 2px 2px 0 0;
+  box-shadow: inset -2px 0 0 rgba(0, 0, 0, 0.18);
+}
+.anim-book.b1 { width: 14px; height: 82%; background: #b5544a; }
+.anim-book.b2 { width: 11px; height: 94%; background: #4a72b5; }
+.anim-book.b3 { width: 15px; height: 74%; background: #d9a441; }
+.anim-book.b4 { width: 10px; height: 88%; background: #5c8a4f; }
+.anim-book.b5 { width: 13px; height: 79%; background: #7a5aa6; }
+.anim-book.b6 { width: 12px; height: 91%; background: #c96f3b; }
+.anim-book.b7 { width: 14px; height: 70%; background: #4f8a86; }
+.anim-book.b8 { width: 11px; height: 85%; background: #b54a82; }
+
+/* 魔法书 —— 女孩进入的那一本 */
+.anim-magic-book {
+  width: 16px; height: 96%;
+  background: linear-gradient(to bottom, #e8c35c, #c9992e);
+  position: relative;
+  transition: box-shadow .8s ease, transform .8s ease;
+}
+.anim-stage[data-phase="inside"] .anim-magic-book {
+  box-shadow: 0 0 20px 6px rgba(255, 222, 130, 0.95), inset -2px 0 0 rgba(0,0,0,.12);
+  transform: translateY(-4px);
+}
+
+/* 星光 */
+.anim-sparkle {
+  position: absolute;
+  color: #ffe9a8;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 0 0 8px #ffd76e;
+}
+.anim-sparkle.s1 { top: -14px; left: -10px; }
+.anim-sparkle.s2 { top: -20px; right: -8px; font-size: 11px; }
+.anim-sparkle.s3 { top: 8px; right: -14px; font-size: 12px; }
+.anim-stage[data-phase="inside"] .anim-sparkle { animation: sparklePop 1.2s ease-in-out infinite; }
+.anim-stage[data-phase="inside"] .anim-sparkle.s2 { animation-delay: .4s; }
+.anim-stage[data-phase="inside"] .anim-sparkle.s3 { animation-delay: .8s; }
+@keyframes sparklePop {
+  0%, 100% { opacity: 0; transform: scale(.4) rotate(0deg); }
+  50%      { opacity: 1; transform: scale(1.2) rotate(25deg); }
+}
+
+/* ── 重播按钮 ── */
+.anim-replay {
+  position: absolute;
+  top: 10px; right: 12px;
+  z-index: 6;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: #3c5426;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background .2s ease, transform .2s ease;
+}
+.anim-replay:hover { background: #fff; transform: translateY(-1px); }
+
+/* ── 小屏适配 ── */
+@media (max-width: 576px) {
+  .anim-stage { height: 250px; }
+  .anim-girl { transform-origin: bottom left; }
+  .anim-girl { width: 80px; height: 144px; }
+  .anim-girl-head { width: 54px; height: 54px; }
+  .anim-girl-body { top: 50px; width: 44px; height: 56px; }
+  .anim-girl-leg { top: 102px; width: 14px; height: 38px; }
+  .anim-girl-leg.l { left: 23px; }
+  .anim-girl-leg.r { left: 43px; }
+  .anim-girl-arm { top: 60px; width: 30px; }
+  .anim-cat { bottom: 84px; width: 62px; height: 48px; }
+  .anim-cat-head { width: 38px; height: 38px; left: 18px; }
+  .anim-cat-body { width: 46px; height: 25px; }
+  .anim-bookcase { width: 128px; height: 178px; }
+  .anim-heart.h1 { bottom: 140px; }
+  .anim-heart.h2 { bottom: 134px; }
+  .anim-heart.h3 { bottom: 136px; }
+  .anim-stage[data-phase="release"] .anim-cat,
+  .anim-stage[data-phase="walk"] .anim-cat,
+  .anim-stage[data-phase="enter"] .anim-cat,
+  .anim-stage[data-phase="inside"] .anim-cat { bottom: 46px; }
+}

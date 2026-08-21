@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="assets/css/bookshelf-anim.css">
 </head>
 
 <body id="page-top">
@@ -53,6 +54,70 @@
             <span class="section-eyebrow fade-in" id="shelf-eyebrow">我的书架</span>
             <h1 class="forest-hero-title fade-in" id="shelf-heading">阅读与写作</h1>
             <p class="forest-hero-sub fade-in" id="shelf-sub">书籍 · 电影 · 文字</p>
+        </div>
+
+        <!-- 女孩与猫 · 走进书柜 动画 -->
+        <div class="anim-stage-wrap">
+            <div class="anim-stage" id="anim-stage" data-phase="cuddle" aria-hidden="true">
+                <div class="anim-cloud c1"></div>
+                <div class="anim-cloud c2"></div>
+                <div class="anim-ground"></div>
+
+                <div class="anim-bookcase">
+                    <div class="anim-shelf">
+                        <div class="anim-book b1"></div>
+                        <div class="anim-book b2"></div>
+                        <div class="anim-book b3"></div>
+                        <div class="anim-book b4"></div>
+                        <div class="anim-book b5"></div>
+                        <div class="anim-book b6"></div>
+                        <div class="anim-book b7"></div>
+                    </div>
+                    <div class="anim-shelf">
+                        <div class="anim-book b4"></div>
+                        <div class="anim-book b6"></div>
+                        <div class="anim-book anim-magic-book">
+                            <span class="anim-sparkle s1">✦</span>
+                            <span class="anim-sparkle s2">✦</span>
+                            <span class="anim-sparkle s3">✦</span>
+                        </div>
+                        <div class="anim-book b2"></div>
+                        <div class="anim-book b8"></div>
+                        <div class="anim-book b5"></div>
+                        <div class="anim-book b1"></div>
+                    </div>
+                    <div class="anim-shelf">
+                        <div class="anim-book b7"></div>
+                        <div class="anim-book b3"></div>
+                        <div class="anim-book b8"></div>
+                        <div class="anim-book b1"></div>
+                        <div class="anim-book b5"></div>
+                        <div class="anim-book b2"></div>
+                    </div>
+                </div>
+
+                <div class="anim-girl">
+                    <div class="anim-girl-inner">
+                        <div class="anim-girl-head"><img src="assets/anim/girl-head.png" alt=""></div>
+                        <div class="anim-girl-body"></div>
+                        <div class="anim-girl-arm"></div>
+                        <div class="anim-girl-leg l"></div>
+                        <div class="anim-girl-leg r"></div>
+                    </div>
+                </div>
+
+                <div class="anim-cat">
+                    <div class="anim-cat-tail"></div>
+                    <div class="anim-cat-body"></div>
+                    <div class="anim-cat-head"><img src="assets/anim/cat-head.png" alt=""></div>
+                </div>
+
+                <span class="anim-heart h1">❤</span>
+                <span class="anim-heart h2">❤</span>
+                <span class="anim-heart h3">❤</span>
+
+                <button class="anim-replay" type="button">↻ 重播</button>
+            </div>
         </div>
         <div class="forest-hero-mist"></div>
     </header>
@@ -167,6 +232,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/blog-data.js"></script>
     <script src="assets/js/books-data.js"></script>
+    <script src="assets/js/bookshelf-anim.js"></script>
     <script>
     (function () {
         'use strict';
