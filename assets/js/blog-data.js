@@ -205,7 +205,7 @@ var blogPosts = [
     category: "Study",
     date: "2026-08-25",
     author: "July",
-    image: "assets/img/green-01.jpg",
+    image: "assets/img/green-05.jpg",
     excerpt: "最近在研究建立个人知识库有关的事情，突然很想写一篇“我的知识体系进化史”。",
     content: `
       <p>最近在研究建立个人知识库有关的事情，突然很想写一篇“我的知识体系进化史”。</p>
