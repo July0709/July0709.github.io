@@ -76,7 +76,7 @@
     </footer>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/blog-data.js"></script>
+    <script src="assets/js/blog-data.js?v=20260825"></script>
     <script>
     (function () {
         'use strict';
@@ -151,7 +151,9 @@
         function renderPosts(l) {
             var container = document.getElementById('all-blog-posts');
             if (!container) return;
-            var posts = getBlogPosts();
+            var posts = getBlogPosts().slice().sort(function (a, b) {
+                return new Date(b.date) - new Date(a.date);
+            });
             container.innerHTML = posts.map(function (p) {
                 var title   = l === 'zh' ? p.title   : (p.titleEn   || p.title);
                 var excerpt = l === 'zh' ? p.excerpt : (p.excerptEn || p.excerpt);
