@@ -529,7 +529,7 @@
 
     var posts = getBlogPosts().slice().sort(function (a, b) {
       return new Date(b.date) - new Date(a.date);
-    }).slice(0, 4);
+    }).slice(0, 8);
     if (!posts || !posts.length) return;
 
     var sourceLabel = translations[lang].blogSource;
