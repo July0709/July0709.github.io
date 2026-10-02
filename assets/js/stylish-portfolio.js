@@ -32,9 +32,10 @@
       tl1b1: 'Literature review',
       tl1b2: 'UK Biobank (UKB) database structure exploration & research ideation',
       tl1b3: 'R: microbial co-occurrence network analysis & complex statistical modelling',
-      tl1b4: 'Python: causal machine learning & deep learning exploration',
+      tl1b4: 'Python: causal machine learning & deep learning exploration, single-cell & spatial transcriptomics analysis',
       tl1b5: 'Wet lab: mouse behavioural tests, depression model construction & verification, odour collection',
       tl1b6: 'Web development: GitHub Pages and other tools for site deployment',
+      tl1b7: 'AI-microbiology laboratory setup',
       tl2Date: '2023.09 — 2025.02',
       tl2Org: 'Southern Organoid Research Group',
       tl2Role: 'Core Member | Organoids · Organ-on-a-Chip · Nasopharyngeal Carcinoma',
@@ -59,7 +60,7 @@
       tabBio: 'Bioinformatics', tabWet: 'Wet Lab', tabWeb: 'Web Design',
       /* Bio panel */
       bioRDesc: 'Microbial co-occurrence network analysis & complex statistical modelling',
-      bioPyDesc: 'Causal machine learning (CausalML) & deep learning exploration',
+      bioPyDesc: 'Causal machine learning (CausalML), deep learning & single-cell transcriptomics analysis',
       bioUkbDesc: 'Database structure deep-dive & research hypothesis development',
       vizCap1: 'Co-occurrence Network Analysis',
       vizCap2: 'Module Network',
@@ -83,15 +84,14 @@
       portfolioSubtitle: 'Driven by curiosity, guided by evidence, and committed to bridging laboratory discoveries with clinical impact.',
       acadQuote: '"Medicine is a science of uncertainty and an art of probability — my research aims to narrow that uncertainty through rigorous, data-driven inquiry."',
       pillar1Title: 'Computational Medicine',
-      pillar1Desc: 'Leveraging bioinformatics, causal machine learning, and population-scale biobanks to uncover disease mechanisms hidden in large-scale biological data.',
+      pillar1Desc: 'Leveraging bioinformatics, population-scale biobanks, and clinical cohorts to uncover disease mechanisms hidden in large-scale biological data.',
       pillar2Title: 'Translational Research',
       pillar2Desc: 'Bridging bench discoveries to bedside applications through organoid models, organ-on-a-chip platforms, and in vivo validation studies.',
       pillar3Title: 'Open & Reproducible Science',
       pillar3Desc: 'Committed to transparent methodology, open data practices, and interdisciplinary collaboration as foundations of trustworthy science.',
       interestsEyebrow: 'Research Interests',
-      tag1: 'Skin Microbiome', tag2: 'Causal Machine Learning', tag3: 'Organ-on-a-Chip',
-      tag4: 'UK Biobank', tag5: 'Nasopharyngeal Carcinoma', tag6: 'Olfactory Pathway',
-      tag7: 'Microbiome Metabolites', tag8: 'Depression Models',
+      tag1: 'Virtual Cell', tag2: 'Single-Cell Foundation Models', tag3: 'Skin Microbiome',
+      tag4: 'Microbe–Host Interactions', tag5: 'Evolution', tag6: 'AI-Agent Workflows',
       /* CTA */
       ctaHeading: "Let's Connect!",
       ctaBtn1: 'Contact Me', ctaBtn2: 'My GitHub',
@@ -135,9 +135,10 @@
       tl1b1: '文献综述撰写',
       tl1b2: 'UK Biobank（UKB）数据库数据结构深度探索与研究思路积累',
       tl1b3: 'R 语言：微生物共现网络分析与复杂统计建模',
-      tl1b4: 'Python：因果机器学习（CausalML）及深度学习探索',
+      tl1b4: 'Python：因果机器学习（CausalML）及深度学习探索，单细胞转录组与空间转录组分析',
       tl1b5: '湿实验：小鼠行为学、抑郁鼠造模及验证、气味收集',
       tl1b6: '网页搭建：熟练使用 GitHub Pages 等工具进行网站部署',
+      tl1b7: 'AI-微生物实验室搭建',
       tl2Date: '2023.09 — 2025.02',
       tl2Org: '南方类器官课题组',
       tl2Role: '核心成员 | 类器官 · 器官芯片 · 鼻咽癌',
@@ -162,7 +163,7 @@
       tabBio: '生信技能', tabWet: '湿实验技能', tabWeb: '网站制作技能',
       /* 生信面板 */
       bioRDesc: '微生物共现网络分析 & 复杂统计建模',
-      bioPyDesc: '因果机器学习（CausalML）& 深度学习探索',
+      bioPyDesc: '因果机器学习（CausalML）、深度学习探索与单细胞转录组分析',
       bioUkbDesc: '数据库结构深度探索与研究假设构建',
       vizCap1: '共现网络分析',
       vizCap2: '模块网络图',
@@ -185,15 +186,14 @@
       portfolioSubtitle: '以好奇心为驱动，以证据为引导，致力于将实验室发现转化为临床影响。',
       acadQuote: '"医学是不确定性的科学，也是概率的艺术——我的研究目标是通过严谨的数据驱动探索，缩小这种不确定性。"',
       pillar1Title: '计算医学',
-      pillar1Desc: '运用生物信息学、因果机器学习及大规模生物样本库，挖掘藏于海量生物数据中的疾病机制。',
+      pillar1Desc: '利用生物信息学、大规模生物样本库与临床队列，挖掘藏于海量生物数据中的疾病机制。',
       pillar2Title: '转化医学研究',
       pillar2Desc: '借助类器官模型、器官芯片平台及体内验证实验，将实验室发现转化为临床应用。',
       pillar3Title: '开放与可重复科学',
       pillar3Desc: '坚持透明的研究方法、开放数据实践与跨学科合作，以此为值得信赖的科学奠定基础。',
       interestsEyebrow: '研究兴趣',
-      tag1: '皮肤微生物组', tag2: '因果机器学习', tag3: '器官芯片',
-      tag4: 'UK Biobank', tag5: '鼻咽癌', tag6: '嗅觉通路',
-      tag7: '微生物代谢物', tag8: '抑郁症模型',
+      tag1: '虚拟细胞', tag2: '单细胞基础模型', tag3: '皮肤微生物',
+      tag4: '微生物与宿主互作', tag5: '进化', tag6: 'AI-Agent工作流',
       ctaHeading: '让我们联系吧！',
       ctaBtn1: '联系我', ctaBtn2: '我的 GitHub',
       contactEyebrow: '保持联系',
@@ -271,7 +271,7 @@
     setText('chip2-toggle-label', t.chip2Toggle);
     setText('tl1-date', t.tl1Date); setText('tl1-org', t.tl1Org); setText('tl1-role', t.tl1Role);
     setText('tl1-b1', t.tl1b1); setText('tl1-b2', t.tl1b2); setText('tl1-b3', t.tl1b3);
-    setText('tl1-b4', t.tl1b4); setText('tl1-b5', t.tl1b5); setText('tl1-b6', t.tl1b6);
+    setText('tl1-b4', t.tl1b4); setText('tl1-b5', t.tl1b5); setText('tl1-b6', t.tl1b6); setText('tl1-b7', t.tl1b7);
     setText('tl2-date', t.tl2Date); setText('tl2-org', t.tl2Org); setText('tl2-role', t.tl2Role);
     setText('tl2-b1', t.tl2b1); setText('tl2-b2', t.tl2b2); setText('tl2-b3', t.tl2b3); setText('tl2-b4', t.tl2b4);
     setText('tl2-toggle-label', t.awardsToggle);
@@ -312,7 +312,6 @@
     setText('interests-eyebrow',  t.interestsEyebrow);
     setText('tag1', t.tag1); setText('tag2', t.tag2); setText('tag3', t.tag3);
     setText('tag4', t.tag4); setText('tag5', t.tag5); setText('tag6', t.tag6);
-    setText('tag7', t.tag7); setText('tag8', t.tag8);
 
     /* CTA */
     setText('cta-heading', t.ctaHeading);
