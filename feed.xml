@@ -15,7 +15,7 @@
       <height>144</height>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Aug 2026 11:06:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 13:40:32 GMT</lastBuildDate>
     <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
     <generator>scripts/generate-feed.js</generator>
     <item>
@@ -26,7 +26,7 @@
       <author>July</author>
       <category>Study</category>
       <description>最近在研究建立个人知识库有关的事情，突然很想写一篇“我的知识体系进化史”。</description>
-      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/green-05.jpg" alt="知识体系进化史：从应试到研究生活" />
+      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/blog-covers/green-05.jpg" alt="知识体系进化史：从应试到研究生活" />
 <p>最近在研究建立个人知识库有关的事情，突然很想写一篇“我的知识体系进化史”。</p>
       <p>太久远的记不清了，初中以前都比较贪玩，成绩平平。就从中学说起吧。八年制的我，勉强算是一个在应试教育中取得胜利的学生，初高中生活确实仰赖体系完善的笔记本。上高中之前，应该是疫情阶段的网课，我在网上看到了Whynot错题本，是一个上交大的人分享的他的笔记，他记得很全，对于如何做笔记和做错题本都有很好的参考。那时我大为震撼，彼时虽已经格式化整理笔记和错题本多年，但何泰然师兄的整理给我一种全新的视角。</p>
       <p>我很喜欢手写笔记的感觉，认为知识体系整理的过程就是把一团麻线整理清楚一样的过程。做笔记是为了更好地记忆知识点，切勿流于表面。越来越长大，我愈加发现，我们并不是为了展示与证明，许多过程，或是乐在其中，或是为自己有一个交代就足够了。记得初三的时候拿着邻居老姨赠予的100页本子，我便生出现在离中考还有100天，我一天整理一道错题，把这本本子写满便上考场的豪情。最后虽然没有写满100页，数学也只是过得去的水平（110/120），却意外收获了学业特别奖奖学金。可见，有的时候，就是需要“但行好事，莫问前程”。这个过程坚持下来，也让曾经的同学发出来“你变了，又好像没变”的评价。</p>
@@ -53,7 +53,7 @@
       <author>July</author>
       <category>Study</category>
       <description>「读万卷书，行万里路」——这是我对整门课程最深刻的体会...</description>
-      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/green-04.jpg" alt="课程推荐与建议：人文与社会医学三" />
+      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/blog-covers/green-04.jpg" alt="课程推荐与建议：人文与社会医学三" />
 <p>“读万卷书，行万里路”，我觉得这句话是我对于整个课程最为深刻的体会。</p>
       <h2>科技真正融入课堂</h2>
       <p>第一堂课，了解到老师与时俱进地使用 AI 设计了互动小游戏和智能体的时候，我就对这门课别出心裁的课程安排印象非常深刻。下课时候，还和老师聊及 CC 的使用以及前沿话题，除了"科技改变生活"的直观感受之外，在高老师身上，我看到了一种终身学习的信念——大抵是因为我的父母和一些长辈与高老师年岁相近，但这些高新技术产品于他们而言只是新时代的产物，他们尚不能站在更高的维度去使用和开发这些工具。从第一次课精美的 PPT，到儿童安全防护的交互式游戏、再到两次模拟医患沟通的智能体，老师们将科技真正融入了课程之中，这在之前的课程中，是没有的。</p>
@@ -88,7 +88,7 @@
       <author>July</author>
       <category>Study</category>
       <description>寄生虫课程的 PBL 让我印象深刻，从中学到的远不止医学知识本身...</description>
-      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/green-02.jpg" alt="从 PBL 中，我们能学到什么" />
+      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/blog-covers/green-02.jpg" alt="从 PBL 中，我们能学到什么" />
 <p>寄生虫课程的 PBL 的 wcm 老师让我印象挺深刻的，第一节 PBL 课我作为"主席"需要添加老师微信。当时她掏出了收付款码，我马上说：额不是收款码……</p>
       <p>她：你不要说出来……</p>
       <p>她笑得前仰后合，我也是第一次见这么"亲民"的一位老师。</p>
@@ -125,7 +125,7 @@
       <author>July</author>
       <category>Research</category>
       <description>三月份做网络分析时有感，成为通才与成为专才，其实并不矛盾...</description>
-      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/green-03.jpg" alt="「通才」与「专才」，其实并不矛盾" />
+      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/blog-covers/green-03.jpg" alt="「通才」与「专才」，其实并不矛盾" />
 <p>三月份做网络分析时有感。</p>
       <h2>通才 vs 专才</h2>
       <p>成为 block-shaped generalist，是在各个维度上更好地理解整个领域，能接住项目需求，推动项目落地。但是最忌浮光掠影、囫囵吞枣。</p>
@@ -158,7 +158,7 @@
       <author>July</author>
       <category>Life</category>
       <description>我不知道未来自己会怎么想，至少现在，我觉得自己是幸运的，能够有幸与优秀的人为伍...</description>
-      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/green-01.jpg" alt="旧年致谢" />
+      <content:encoded><![CDATA[<img src="https://july0709.github.io/assets/img/blog-covers/green-01.jpg" alt="旧年致谢" />
 <p>我不知道未来自己会怎么想，至少现在，我觉得自己是幸运的，能够有幸与优秀的人为伍，见识到更宽广的世界。</p>
       <p>在一个有纪念意义的时间点，回望过去的一年，我感念我在学校的所有遇见。这一路上，成败起伏，遇到的好的与不那么好的人，都塑造了这样一个完整的我。</p>
       <p>犹记得在感谢外研社老师给我机会参加省赛时他回复的：</p>
