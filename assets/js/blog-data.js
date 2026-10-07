@@ -48,7 +48,7 @@ var blogPosts = [
     category: "Life",
     date: "2026-01-01",
     author: "July",
-    image: "assets/img/green-01.jpg",
+    image: "assets/img/blog-covers/green-01.jpg",
     excerpt: "我不知道未来自己会怎么想，至少现在，我觉得自己是幸运的，能够有幸与优秀的人为伍...",
     excerptEn: "I don't know how I'll feel in the future — but right now, I feel lucky to have walked alongside exceptional people...",
     content: `
@@ -86,7 +86,7 @@ var blogPosts = [
     category: "Research",
     date: "2026-03-16",
     author: "July",
-    image: "assets/img/green-03.jpg",
+    image: "assets/img/blog-covers/green-03.jpg",
     excerpt: "三月份做网络分析时有感，成为通才与成为专才，其实并不矛盾...",
     excerptEn: "A thought sparked during a network analysis session — being a generalist and a specialist are not mutually exclusive...",
     content: `
@@ -124,7 +124,7 @@ var blogPosts = [
     category: "Study",
     date: "2026-04-10",
     author: "July",
-    image: "assets/img/green-02.jpg",
+    image: "assets/img/blog-covers/green-02.jpg",
     excerpt: "寄生虫课程的 PBL 让我印象深刻，从中学到的远不止医学知识本身...",
     excerptEn: "The PBL sessions in our parasitology course left a lasting impression — what I learned went far beyond medical knowledge itself...",
     content: `
@@ -166,7 +166,7 @@ var blogPosts = [
     category: "Study",
     date: "2026-05-17",
     author: "July",
-    image: "assets/img/green-04.jpg",
+    image: "assets/img/blog-covers/green-04.jpg",
     excerpt: "「读万卷书，行万里路」——这是我对整门课程最深刻的体会...",
     excerptEn: "\"Read ten thousand books, travel ten thousand miles\" — the phrase that best captures what this course gave me...",
     content: `
@@ -205,7 +205,7 @@ var blogPosts = [
     category: "Study",
     date: "2026-08-25",
     author: "July",
-    image: "assets/img/green-05.jpg",
+    image: "assets/img/blog-covers/green-05.jpg",
     excerpt: "最近在研究建立个人知识库有关的事情，突然很想写一篇“我的知识体系进化史”。",
     content: `
       <p>最近在研究建立个人知识库有关的事情，突然很想写一篇“我的知识体系进化史”。</p>

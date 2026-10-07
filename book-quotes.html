@@ -95,6 +95,12 @@
             color: rgba(245, 240, 232, 0.35);
             font-family: 'Inter', sans-serif;
         }
+        .quotes-book-note {
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            color: rgba(245, 240, 232, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
 
         /* ── Quotes Grid (masonry via CSS columns) ── */
         .quotes-main {
@@ -300,6 +306,7 @@
                 <p class="quotes-book-author" id="quotes-author"></p>
                 <span class="quotes-book-genre-tag" id="quotes-genre"></span>
                 <p class="quotes-count-label" id="quotes-count"></p>
+                <p class="quotes-book-note" id="quotes-note"></p>
             </div>
         </div>
     </header>
@@ -327,7 +334,7 @@
     </div>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/books-data.js"></script>
+    <script src="assets/js/books-data.js?v=20261007"></script>
     <script>
     (function () {
         'use strict';
@@ -410,6 +417,14 @@
             setT('quotes-author', author);
             setT('quotes-genre', genre);
             setT('quotes-count', quotes.length > 0 ? tr.countLabel(quotes.length) : '');
+
+            /* Optional source note (e.g. lecture attribution) */
+            var noteEl = document.getElementById('quotes-note');
+            var note = l === 'zh' ? (book.note || '') : (book.noteEn || book.note || '');
+            if (noteEl) {
+                noteEl.textContent = note;
+                noteEl.style.display = note ? '' : 'none';
+            }
 
             /* Apply book color as accent */
             document.getElementById('quotes-header').style.setProperty('--book-accent-color', hexToRgba(book.color, 0.22));

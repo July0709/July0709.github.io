@@ -9,7 +9,7 @@
       langButton: '中文',
       /* Nav */
       navHome: 'Home', navAbout: 'About', navServices: 'Services',
-      navPortfolio: 'Portfolio', navBlog: 'Blog', navFriends: 'Friends', navContact: 'Contact',
+      navPortfolio: 'Interests', navBlog: 'Blog', navFriends: 'Friends', navContact: 'Contact',
       /* Hero */
       heroEyebrow: 'Southern Medical University',
       heroTitle: 'Be a Spring Tree, See Those Spring Mountains',
@@ -115,7 +115,7 @@
     zh: {
       langButton: 'EN',
       navHome: '首页', navAbout: '关于', navServices: '技能',
-      navPortfolio: '作品集', navBlog: '博客', navFriends: '友链', navContact: '联系',
+      navPortfolio: '兴趣', navBlog: '博客', navFriends: '友链', navContact: '联系',
       heroEyebrow: '南方医科大学',
       heroTitle: '去做春树，见那春山',
       heroSubtitle: 'July',
@@ -532,21 +532,61 @@
     if (!posts || !posts.length) return;
 
     var sourceLabel = translations[lang].blogSource;
-    var activeIndex = 0;
+
+    /* Shared image cache across re-renders (language switches) */
+    var cache = renderBlogNewsPreview._cache || (renderBlogNewsPreview._cache = {});
+
+    /* Preload every cover right away so hover switching is instant */
+    posts.forEach(function (p) {
+      if (p.image && !cache[p.image]) {
+        var pre = new Image();
+        pre.src = p.image;
+        cache[p.image] = pre;
+      }
+    });
+
+    /* Token guards against out-of-order hover callbacks */
+    var switchToken = 0;
+
+    function showImage(index) {
+      if (!imgEl || !posts[index] || !posts[index].image) return;
+      var src   = posts[index].image;
+      var alt   = lang === 'zh' ? posts[index].title : (posts[index].titleEn || posts[index].title);
+      var token = ++switchToken;
+      var pre   = cache[src];
+
+      var apply = function () {
+        if (token !== switchToken) return; /* a newer hover already won */
+        imgEl.src = src;
+        imgEl.alt = alt;
+        imgEl.style.opacity = '1';
+      };
+      var fail = function () {
+        if (token !== switchToken) return;
+        imgEl.style.opacity = '0'; /* hide rather than show a broken image */
+      };
+
+      if (pre && pre.complete && pre.naturalWidth > 0) {
+        /* Already loaded: brief cross-fade, then swap */
+        imgEl.style.opacity = '0';
+        setTimeout(apply, 120);
+      } else {
+        /* Not loaded yet: keep the current image visible, swap when ready */
+        var loader = pre || new Image();
+        loader.onload  = apply;
+        loader.onerror = fail;
+        if (!pre) {
+          loader.src = src;
+          cache[src] = loader;
+        }
+      }
+    }
 
     function setActive(index) {
-      activeIndex = index;
       list.querySelectorAll('.blog-news-item').forEach(function (el, i) {
         el.classList.toggle('active', i === index);
       });
-      if (imgEl && posts[index]) {
-        imgEl.style.opacity = '0';
-        setTimeout(function () {
-          imgEl.src = posts[index].image;
-          imgEl.alt = lang === 'zh' ? posts[index].title : (posts[index].titleEn || posts[index].title);
-          imgEl.style.opacity = '1';
-        }, 150);
-      }
+      showImage(index);
     }
 
     list.innerHTML = posts.map(function (p, i) {
@@ -558,11 +598,8 @@
         '</a>';
     }).join('');
 
-    /* Set initial image */
-    if (imgEl && posts[0]) {
-      imgEl.src = posts[0].image;
-      imgEl.alt = lang === 'zh' ? posts[0].title : (posts[0].titleEn || posts[0].title);
-    }
+    /* Set initial image (swaps in as soon as it finishes loading) */
+    showImage(0);
 
     /* Hover: update active state & image (without navigating) */
     list.querySelectorAll('.blog-news-item').forEach(function (el, i) {
@@ -668,10 +705,27 @@
   })();
 
   /* ============================================================
-     Mobile: pause hero video to save bandwidth
+     Hero video: keep autoplay everywhere (muted+playsinline is
+     allowed on mobile). If a browser blocks autoplay, retry play
+     on the first user interaction instead of showing a poster.
      ============================================================ */
   var heroVideo = document.getElementById('hero-video');
-  if (heroVideo && window.innerWidth <= 768) { heroVideo.pause(); }
+  if (heroVideo) {
+    var tryPlayHero = function () {
+      var p = heroVideo.play();
+      if (p && p.catch) {
+        p.catch(function () {
+          var resume = function () {
+            heroVideo.play().catch(function () {});
+          };
+          document.addEventListener('touchstart', resume, { once: true });
+          document.addEventListener('click', resume, { once: true });
+        });
+      }
+    };
+    if (heroVideo.readyState >= 2) { tryPlayHero(); }
+    else { heroVideo.addEventListener('canplay', tryPlayHero, { once: true }); }
+  }
 
   /* ============================================================
      Timeline circle: mouse-tracking magnifier (node 1)
