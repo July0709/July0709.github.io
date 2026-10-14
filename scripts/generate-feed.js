@@ -46,7 +46,10 @@ function cdata(s) {
 
 function toRfc822(dateStr) {
   // "YYYY-MM-DD" → RFC-822 (use 08:00 UTC+8 so it stays the same calendar day in CN)
-  return new Date(`${dateStr}T08:00:00+08:00`).toUTCString();
+  // 封顶为生成时刻：pubDate 落在未来会被 Fluent Reader 等阅读器隐藏
+  const d = new Date(`${dateStr}T08:00:00+08:00`);
+  const now = new Date();
+  return (d > now ? now : d).toUTCString();
 }
 
 // ── Build items ──
