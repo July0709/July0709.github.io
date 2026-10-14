@@ -231,6 +231,94 @@ var blogPosts = [
     `
   }
 
+  ,{
+    id: 6,
+    title: "答博客作者问卷",
+    category: "Life",
+    date: "2026-10-15",
+    author: "July",
+    image: "assets/img/blog-covers/green-06.png",
+    excerpt: "借由春山赋创刊，交上一份“答博客作者问卷”的答卷：关于写作的契机、创作的方式、失去动力的时刻，以及想去的远方。",
+    content: `
+      <p>年初的时候，我开始经营个人博客。最近因为一些网站和插件的开发，突然想做一个公众号留档，这样方便与各位朋友交流。同时想起来，博客更新了几篇内容，但却没有一个关于自己与博客的正式介绍。所以，借由<strong>春山赋</strong>创刊，同时回答“答博客作者问卷”。</p>
+      <p>我了解这个问卷的时间晚于问卷的流行。那是在24年的时候，Dayu发起了《博客作者呀，我想采访你这 9 个问题！》。现在，我也想交上一份自己的答卷。</p>
+      <blockquote>「为自己而写作」是绝大多数作者的自我形象定义。这个行业，有它自己的传统。<br>—— 李兆欣</blockquote>
+      <h2>简单介绍下自己或者你的博客？</h2>
+      <p><em>Be a Spring Tree, See Those Spring Mountains.</em></p>
+      <p>去做春树，见那春山。</p>
+      <p>做一棵树，先往下扎根，往上生长，不急不躁；然后登高，去见更远的山。年轻的时候多尝试，不只是为了积累生命体验，更是在与不同的人打交道的过程中，更好地认识自己。</p>
+      <p>赋，是一种古老的文体——铺陈事物，抒写情志。<strong>为春山作赋，就是把我看见的、走过的、想到的，认认真真写下来。</strong></p>
+      <p>我是一名临床医学八年制学生，我的博客和公众号以春山赋为命名，书写八年生长的青春感受，归类为<strong>生长记</strong>。博客中也有一些“无用”之书的摘抄，姑且称为<strong>春山书房</strong>。</p>
+      <p>博客和公众号不追热点，更新较为随意，只是一笔一笔描摹走过的风景。</p>
+      <h2>什么契机让你开始写博客？</h2>
+      <p>25年3月，我接到课题组的任务，需要搭建一个课题组网站。网站借助Github搭建，一开始是fork的别人课题组的网站，并且由于从来没接触过这方面的知识，并且那是一个AI智能体还没有腾飞的年代，什么工作流更是天方夜谭，我的状态是每天和Github的Copilot灵魂对话。小小的对话框映着我无知的双眼，但在这个过程中，我也学会了静态网站的托管。</p>
+      <p>为了能够畅享Copilot的额度，以便更好地完成课题组布置的任务，我想办法在Github上面进行学生认证，接触到了Github上的<strong>Developer package</strong>。这里面我找到了一个可以实现拖拽类似公众号编辑来组织网页的工具。处于尝试，我决定通过建立个人网站来验证这一工具。</p>
+      <p>最初是个人简历页，一开始只有简单的色块，那一个版本的网页早已被后续迭代覆盖，但我仍然记得一开始做出网页那种兴奋异常的心情。那一年的暑假，我在家休息的时候，偶然刷到了同校师兄做的博客网页（Davidの3号基底）。很是赞佩，留下了”浓浓的经济上行感“这样的评价。</p>
+      <p>算是一个契机，我也想拥有这样一个<em>「更加接近真实的我」</em>的天地，这样能使个人主页的内容更加丰富，毕竟一开始建网页的时候，也有拿给一些长辈看，他们说网页的内容太少，没有很多让人探索和遐想的空间，可以去看看微软的主页寻找一下灵感，里面都是填满了各种作品的。同时，我算是一个比较热爱记录的人，一直同笔友写信，这个爱好保持了7年，先是手写信、后是邮件。<em>写信是浪漫的，浪漫在那段笔尖摩擦于纸面的时光，那一起走过的中考、高考的兵荒马乱，浪漫在天各一方的牵挂，深深感觉这好像一种现代化侨批</em>；而写博客，我个人认为是一种生活经历的理性沉淀。</p>
+      <p>于是，我就开始写博客了。或许，我会写很久。</p>
+      <h2>你是如何完成创作的？</h2>
+      <p>这里面的一些灵感大多来源于学习生活与科研生活。对于前者，学生身份已经在身上留存了十几年，自然有一番肺腑之言；而对于后者，处于科研的入门阶段，总是接触到一些新鲜的东西，容易迸发灵感。我把每一次创作当作是一个节点的见证，因为总是要在沉淀下来之后才能进行思维的流动。一般而言，我会选择在晴朗的下午，泡上下午茶开始写作；或者，在深夜，享受机械键盘的清脆。在等待来信与邮件的过程中，我也会整理一些想写的点，后面不知不觉组织成博客。</p>
+      <p>我会写一些md，有的时候就只是打开记事本开始写，有的时候的会议纪要也是记事本写的，电脑中存了无数个txt文件。</p>
+      <h2>运营博客的过程中是否有失去过动力？如果有，是为什么恢复的？如果没有，请问您又是如何保持创作的激情？</h2>
+      <p>目前我更新缓慢，所以压力不大，并且一开始博客只有我和几位好朋友知道和会看，后来才建立RSS订阅链接。这一个论题的论述可以参考《与其读别人的故事，不如写自己的故事》这一辩论赛，我总觉得如果失去动力，就好像焦虑的作者落入了他人即他狱的陷阱。</p>
+      <blockquote>“有的时候，我需要去写自己的故事，是因为我的面前，没有我想要的故事。”</blockquote>
+      <p>不管是博客，还是人生。</p>
+      <h2>如何搭建博客，以及运营博客每年需要投入的资金？</h2>
+      <p>搭建博客的过程前文已有所提及，由于我在Github上建立，所以省去了租服务器的费用。也算见证了历史，记得26年年初Claude可以生成网页，我开始尝试用CC辅助团队网页的建设，直到最终定稿。现在AI时代管理项目不再困难，但更考验架构的设想等能力。我这边成本可以近似于只有我的时间成本。</p>
+      <h2>推荐 1 篇你博客中的文章，并推荐一个你喜欢读的博客，聊聊原因。</h2>
+      <p>推荐《知识体系进化史：从应试到研究生活》这篇，因为是我书写的博客里面较为长的一篇，也算是目前能拿得出手的一篇。</p>
+      <p>喜欢读的博客还是前面提到的师兄的博客，因为和我的学习生活来得更近一些。</p>
+      <h2>推荐 1 个近期喜欢的事物？</h2>
+      <p>（例如书籍、电影、音乐、工具、软件。）</p>
+      <p>埃里希·弗罗姆的《爱的艺术》是我最近读完的一本书，并且正在入坑《逃避自由》。不过对于心理学和社会学，我是很喜欢的。</p>
+      <h2>想做还没有做的事，或想尝试还没有尝试的主题？</h2>
+      <p>想再去一趟彩云之南，因为之前毕业的时候去云南是大夏天，玉龙雪山没有雪，所以没去。想要慢悠悠地在自然中浸润，虽然热门景点总是人挤人。</p>
+      <h2>写到这里，闭上你的眼睛，深呼吸几分钟，或是出去溜达一圈，然后回来写任何你想写的东西。</h2>
+      <p>在人体工学椅上伸了个懒腰，书写长文字带来地内啡肽快乐让我很是满足。好想拥有一个漫长的假期，再去读一读自己喜欢读的书，怀念26年寒假每天骑着自行车去实验室的日子，那时的学业和科研上都没有什么催促，可以自由阅读文献和喜欢看的书，是一个很成功的转型过渡期。</p>
+      <p>春山有馥，落笔成赋。带着我的过去，在未来等你。</p>
+    `,
+    titleEn: "Answering the Blogger Questionnaire",
+    excerptEn: "Taking the launch of Chunshan Fu as an occasion, here is my answer sheet for the \"Blogger Questionnaire\": on why I started writing, how I create, moments of lost motivation, and the journeys still ahead.",
+    contentEn: `
+      <p>Earlier this year, I began running my personal blog. Recently, with the development of some websites and plugins, I suddenly wanted to keep a WeChat official account as an archive, so that it would be easier to stay in touch with friends. At the same time, I realised that although the blog already had several posts, there was still no formal introduction to myself or the blog. So, taking the launch of <strong>Chunshan Fu</strong> as an occasion, I am also answering the "Blogger Questionnaire".</p>
+      <p>I came across this questionnaire later than its wave of popularity. Back in 2024, Dayu launched "Dear Blogger, May I Interview You with These 9 Questions!" Now, I would like to hand in my own answer sheet.</p>
+      <blockquote>"Writing for oneself" is how the vast majority of writers define themselves. This trade has its own tradition.<br>— Li Zhaoxin</blockquote>
+      <h2>Could you briefly introduce yourself or your blog?</h2>
+      <p><em>Be a Spring Tree, See Those Spring Mountains.</em></p>
+      <p>Be a spring tree; go and see those spring mountains.</p>
+      <p>To be a tree: first root downward and grow upward, unhurried and unperturbed; then climb higher, to see mountains farther away. Trying many things while young is not only about accumulating life experience — it is also, in the course of dealing with different people, about knowing yourself better.</p>
+      <p>Fu is an ancient literary form — laying things out in detail and giving voice to feeling. <strong>To compose a fu for the spring mountains is to write down, carefully and earnestly, everything I have seen, walked through, and thought about.</strong></p>
+      <p>I am an eight-year clinical medicine student. My blog and official account are named Chunshan Fu, recording the feelings of a youth spent growing over eight years — filed under <strong>Notes of Growth</strong>. The blog also carries excerpts from some "useless" books, which I tentatively call the <strong>Spring Mountain Study</strong>.</p>
+      <p>Neither the blog nor the account chases trends; updates come at their own pace, simply sketching, stroke by stroke, the scenery I have passed through.</p>
+      <h2>What prompted you to start blogging?</h2>
+      <p>In March 2025, my research group assigned me the task of building a group website. The site was built on GitHub. At first I forked another group's website, and since I had never touched any of this before — and it was an era before AI agents had taken off, when workflows were pure fantasy — my daily state was holding soul-searching dialogues with GitHub Copilot. That little chat box reflected my ignorant eyes, but in the process I also learned how to host static websites.</p>
+      <p>To make fuller use of my Copilot quota and better complete the group's assignment, I found a way to complete GitHub's student verification and came across the <strong>Developer Package</strong> on GitHub. In it I found a tool that lets you organise web pages by dragging and dropping, much like editing an official-account article. Out of curiosity, I decided to verify this tool by building a personal website.</p>
+      <p>It began as a personal résumé page — at first just simple blocks of colour. That version has long since been overwritten by later iterations, but I still remember the thrill of making a webpage for the first time. That summer holiday, while resting at home, I happened upon a blog page made by a senior schoolmate from my university (David's Base No. 3). I admired it greatly and left a comment about its "strong sense of economic ascent".</p>
+      <p>It counted as a spark: I too wanted a space <em>"closer to the real me"</em>, which would enrich my personal homepage. After all, when I first built the page I had shown it to some elders, who said it contained too little — not much room for exploration and imagination — and suggested I look at Microsoft's homepage for inspiration, filled as it was with all kinds of works. Besides, I am someone who loves recording: I have kept up letter-writing with pen pals for seven years, first by hand and later by email. <em>Letter-writing is romantic: romantic in the time of a pen nib scratching across paper, in the turmoil of the entrance exams we went through together, and in the longing across the miles — it has always felt to me like a kind of modern qiaopi.</em> Blogging, in my view, is a rational distillation of lived experience.</p>
+      <p>And so I began to blog. Perhaps I will write for a very long time.</p>
+      <h2>How do you go about creating?</h2>
+      <p>Most of my inspiration comes from study life and research life. For the former, the identity of "student" has been on me for more than a decade, so naturally I have heartfelt things to say; for the latter, being at the entry stage of research, I constantly encounter fresh things that easily spark ideas. I treat every piece of writing as the witness of a node, because thoughts can only flow after things have settled. Generally, I choose a sunny afternoon, brew afternoon tea, and begin to write; or, deep at night, I enjoy the crisp sound of a mechanical keyboard. While waiting for letters and emails, I also jot down points I want to write about, which later, almost without my noticing, organise themselves into blog posts.</p>
+      <p>I write in Markdown; sometimes I simply open Notepad and start writing. Some meeting minutes are written in Notepad too — my computer holds countless txt files.</p>
+      <h2>Have you ever lost motivation while running the blog? If so, how did it return? If not, how do you keep your passion for creating?</h2>
+      <p>For now I update slowly, so the pressure is low, and at the beginning only I and a few close friends knew of and read the blog; the RSS subscription link came later. On this question, one may refer to the debate "Rather than reading other people's stories, write your own" — I always feel that losing motivation is like an anxious writer falling into the trap of hell-is-other-people.</p>
+      <blockquote>"Sometimes, I need to write my own story because the story I want is not in front of me."</blockquote>
+      <p>This is true of the blog — and of life.</p>
+      <h2>How is the blog built, and how much does it cost to run each year?</h2>
+      <p>The building process has been touched on above. Since the blog is built on GitHub, I saved the cost of renting a server. I also witnessed a bit of history: I remember that in early 2026 Claude could generate webpages, and I began trying to use CC to assist the construction of the team's website until the final draft. Managing projects is no longer difficult in the AI era, but it tests abilities such as architectural vision all the more. On my side, the cost is nearly just my time.</p>
+      <h2>Recommend one post from your blog, and one blog you enjoy reading — and tell us why.</h2>
+      <p>I recommend "The Evolution of My Knowledge System: From Exam Preparation to Research Life", because it is among the longer posts I have written, and also the most presentable one so far.</p>
+      <p>The blog I enjoy reading is still the senior schoolmate's blog mentioned above, because it sits closer to my own study life.</p>
+      <h2>Recommend one thing you have liked recently?</h2>
+      <p>(For example: a book, a film, music, a tool, a piece of software.)</p>
+      <p>Erich Fromm's <em>The Art of Loving</em> is a book I finished recently, and I am now getting into <em>Escape from Freedom</em>. Psychology and sociology, though, are things I have always loved.</p>
+      <h2>Something you want to do but haven't, or a theme you want to try but haven't yet?</h2>
+      <p>I want to visit the colourful south of the clouds again — Yunnan. When I went there upon graduation it was high summer; Jade Dragon Snow Mountain had no snow, so I did not go up. I want to soak slowly in nature, even though the famous sights are always crowded.</p>
+      <h2>Having written this far, close your eyes, breathe deeply for a few minutes, or take a stroll outside — then come back and write whatever you want.</h2>
+      <p>I stretched in my ergonomic chair; the endorphin joy of writing long-form text left me deeply content. How I long for a long holiday, to reread the books I love. I miss the winter holiday of 2026, when I rode my bicycle to the lab every day — no pressure in coursework or research, free to read papers and the books I liked. It was a very successful transition period.</p>
+      <p>The spring mountains are fragrant; the pen falls, and a fu is formed. Carrying my past with me, I will wait for you in the future.</p>
+    `
+  }
+
 ];
 
 // Function to get blog posts (with optional limit)
