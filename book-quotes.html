@@ -20,19 +20,19 @@
     <style>
         /* ── Quote Page Variables ── */
         :root {
-            --qp-bg: #13110e;
-            --qp-card-bg: #fefaf5;
+            --qp-bg: #0e1310;
+            --qp-card-bg: #f5fbf7;
             --qp-card-border: rgba(0,0,0,0.07);
-            --qp-text: #2c2420;
-            --qp-text-muted: #8b7355;
-            --qp-accent: #b5926a;
+            --qp-text: #1e2b22;
+            --qp-text-muted: #5f7d69;
+            --qp-accent: #3e8e5a;
         }
         [data-bs-theme="dark"] {
-            --qp-bg: #0e0c09;
-            --qp-card-bg: #1e1b17;
+            --qp-bg: #0a0f0c;
+            --qp-card-bg: #161e19;
             --qp-card-border: rgba(255,255,255,0.07);
-            --qp-text: #e8ddd0;
-            --qp-text-muted: #a08060;
+            --qp-text: #dce9e0;
+            --qp-text-muted: #7ba886;
         }
 
         /* ── Page Base ── */
@@ -48,7 +48,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 70% 100% at 20% 0%, var(--book-accent-color, rgba(232,138,90,0.18)) 0%, transparent 70%);
+            background: radial-gradient(ellipse 70% 100% at 20% 0%, var(--book-accent-color, rgba(62,142,90,0.22)) 0%, transparent 70%);
             pointer-events: none;
         }
         .quotes-header-inner {
@@ -69,14 +69,14 @@
             font-family: 'Noto Serif SC', serif;
             font-size: clamp(1.75rem, 5vw, 3rem);
             font-weight: 700;
-            color: #f5f0e8;
+            color: #eef7f0;
             line-height: 1.25;
             margin-bottom: 0.5rem;
         }
         .quotes-book-author {
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            color: rgba(245, 240, 232, 0.55);
+            color: rgba(238, 247, 240, 0.55);
             margin-bottom: 1.25rem;
         }
         .quotes-book-genre-tag {
@@ -92,13 +92,13 @@
         .quotes-count-label {
             margin-top: 1.5rem;
             font-size: 0.8125rem;
-            color: rgba(245, 240, 232, 0.35);
+            color: rgba(238, 247, 240, 0.35);
             font-family: 'Inter', sans-serif;
         }
         .quotes-book-note {
             margin-top: 0.75rem;
             font-size: 0.75rem;
-            color: rgba(245, 240, 232, 0.3);
+            color: rgba(238, 247, 240, 0.3);
             font-family: 'Inter', sans-serif;
         }
 
@@ -165,7 +165,7 @@
         .quotes-empty {
             text-align: center;
             padding: 6rem 2rem;
-            color: rgba(245,240,232,0.3);
+            color: rgba(238,247,240,0.3);
             font-family: 'Noto Serif SC', serif;
             font-size: 1.0625rem;
             line-height: 2;
@@ -256,8 +256,8 @@
 
         /* ── Footer ── */
         .quotes-footer {
-            background: #0a0806;
-            color: rgba(245,240,232,0.3);
+            background: #070d09;
+            color: rgba(238,247,240,0.3);
             text-align: center;
             padding: 2rem 0;
             font-size: 0.8125rem;
@@ -426,8 +426,8 @@
                 noteEl.style.display = note ? '' : 'none';
             }
 
-            /* Apply book color as accent */
-            document.getElementById('quotes-header').style.setProperty('--book-accent-color', hexToRgba(book.color, 0.22));
+            /* Apply fixed green accent glow */
+            document.getElementById('quotes-header').style.setProperty('--book-accent-color', 'rgba(62,142,90,0.25)');
 
             /* Render cards */
             var grid = document.getElementById('quote-grid');
@@ -536,7 +536,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     <meting-js server="netease" type="playlist" id="17764923515"
                fixed="true" mini="true" autoplay="false"
-               theme="#b5926a" loop="all" order="list"
+               theme="#3e8e5a" loop="all" order="list"
                volume="0.7" list-folded="true"></meting-js>
     <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
