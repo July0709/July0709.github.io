@@ -319,6 +319,65 @@ var blogPosts = [
     `
   }
 
+
+
+  ,{
+    id: 7,
+    title: "现在是秋日，你已经披上大衣了吧",
+    titleEn: "It's Autumn Now — You've Put On Your Coat, Haven't You?",
+    category: "Life",
+    date: "2026-10-17",
+    author: "July",
+    image: "assets/img/blog-covers/green-06.png",
+    excerpt: "人生如茶，茶水呈上又倒尽，好在你是我握紧的、为数不多的、仍留身旁的那一盏……",
+    excerptEn: "Life is like tea — poured and emptied, cup after cup. Lucky for me, you are one of the few cups I still hold in my hands...",
+    content: `
+      <p>现在是秋日，你已经披上大衣了吧。但，南国却如余下的盛夏，叫人忍不住去细数一路走来，剩下了什么。</p>
+      <p>我们有好久没见了，自那个盛夏。但是好在走过你我兵荒马乱的高考，即使是北京到广东的距离，也没能将我们打散。人生如茶，茶水呈上又倒尽——<strong>好在你是我握紧的、为数不多的，仍留身旁的那一盏。</strong></p>
+      <p>你比我大一届，本来应该是很少交集的。认识你，最先是文学社交谈的沉静模样，知道你学习很好；后来是操场纵情飞奔的洒脱与自律，又知道你体育不错——我将你一直视为自己的一个榜样。</p>
+      <p>是一张偶然的新年祝福明信片，将我们两个连在了一起。虽说你当时写卡片只是因为社团任务，但我从你的文字中感受到你的贴心暖心，再度渴望靠近你。于是我不断努力，让我的名字在光荣榜上不断靠前，以你为榜样地去学习。</p>
+      <p>许是缘分，后来不经意地在操场多次相逢，我们约定成为了跑友——每天下午放学，在操场上跑上四圈。我为能和优秀的你成为朋友而时常欣喜万分。无数次操场上一同奔跑，夕阳拉长你我身影，我感受到了相伴的快乐。和你一同挂着运动留下的汗水，从操场走到食堂，在饭菜氤氲中扯着关乎高考与人生的话题，或者谈一些小确幸，让满嘴流油遇上满脸笑容——如今看来好似是一种青春的定格，定格两个个体的相识相知，两段青春的单纯无忧。</p>
+      <p>最后一次相见是在去年六月。是盛夏。我提着相机去找你拍照。你要高考了，我们也要分别了。你的宿舍在最顶层，刚好可以看到黛青与酡红交织的霞光。</p>
+      <p>我说我给你准备了一首歌，陈奕迅的《十年》——因为我们虽说相伴没有十年，聊天的许多深度却胜似十年。唱到了"也不过是分手的时候"，我想故意省略"分手"两个字，为了淡化离别；却被你提醒，少唱了"分手"不完整。那时候莫名的哽咽。是的，这个分手，是毕业季注定的分别，我无奈地唱下去。孤零零的云望着我，寂静的教学楼望着我，凉风去吻我青涩的喉，你投来半是沉醉的眸。天色暗了暗，一曲终了，你我只能用不能逗留的怀抱，来做一些告别。</p>
+      <p>那时我祝愿你能事事顺心，也期待在龙虎榜上看到你的名字。后来，也在夏天的余温中，见证了我的期待成为一种现实——你去了北大，读你喜欢的生物。</p>
+      <p>分隔两地，偶尔书信往来，多的是信息传递。你时常发信息鼓励我，鼓励我继续坚持我爱的文学，支持我参加征文比赛。你通过邮寄照片，为我送来燕园的花开、未名湖的荡漾——<strong>在高三那段有些黑暗的路中，你是我握得住的光亮。</strong></p>
+      <p>我曾说过，你去哪所大学，我便去哪所大学。并暗暗地努力着。</p>
+      <p>但是我食言了。也可能，我的确就没有进入北大的能力。高考，并没能让我们在燕园重逢。</p>
+      <p>你说这样也好。你在给我的来信中告诉我：你虽说希望和我一同在燕园共享荣光，但要我知道，适合我的，是更重要的道理——所以让彼此都释怀。你得知了我高考路上的种种挫折，却留下一句"不再同我一一复盘"，叫我将烦心的往事抛向九霄云外，开启一段崭新的人生。</p>
+      <p>是的，这是一段崭新的人生。崭新的十八岁，崭新的学习生活。我没有追逐文学的光影，而是选择了医学的漫长。你说，只要我选择我所热爱的，你都会支持我。而这段崭新的人生中有你——一个从旧时光大浪淘沙中余下的人。我十分幸运。</p>
+      <p>我在余夏中细数余下。我依然惦念着去年夏天的余温，也妄想在记忆中抓住更多其他的余下的人的痕迹。可是时光从掌心划过，穿出去了，只剩下我在默然。</p>
+      <p>前不久回到母校，夏天的余温仍在，夕阳铺满了橙红色的橡胶跑道，遍地流金。两个年岁相仿的女孩子在操场上挥汗如雨，笑靥如花。那阳光拉长的身影融进流光，宛如水墨画。跑累了，她们走在绵长的画里，纵情地唱起歌来。</p>
+      <p>当然，那不是我们。</p>
+      <p><strong>但是，为什么不是我们呢？</strong></p>
+      <p>那时我静静地想着。直到手机里划过你发来的照片——又是燕园花开。我举起相机，拍下那两个女孩在操场漫步的照片，点击，发送。</p>
+      <p>可能是心意相通，你随即发来：</p>
+      <blockquote>很怀念旧时光，不过，未来更漫长。</blockquote>
+      <p>那时我想：这一次，也许我抓住了余夏。</p>
+    `,
+    contentEn: `
+      <p>It is autumn now — you've put on your coat, haven't you? But here in the South it still feels like the remainder of summer, and I can't help counting what, along the way, remains.</p>
+      <p>We haven't seen each other for a long time, not since that midsummer. But having survived the chaos of the gaokao together, even the distance from Beijing to Guangdong failed to scatter us. Life is like tea — the cup is served, then emptied. <strong>Lucky for me, you are one of the few cups I still hold tightly in my hands.</strong></p>
+      <p>You were one year ahead of me, so our paths should barely have crossed. I first knew you as the quiet one at the literature society, and learned you were a top student; then I saw you flying around the track, free-spirited and disciplined, and learned you were good at sports too — all along, I looked up to you as a role model.</p>
+      <p>It was a New Year's postcard, written almost by accident, that tied the two of us together. You wrote it only because the club assigned the task, but I felt the warmth in your words and longed to know you better. So I kept working harder, pushing my name up the honor roll, studying with you as my benchmark.</p>
+      <p>Fate, perhaps: we kept running into each other on the track, and we made a pact to become running partners — four laps every afternoon after class. I was quietly overjoyed to call someone as brilliant as you my friend. Lap after lap, the setting sun stretched our shadows, and I felt the happiness of companionship. Still sweaty, we'd walk from the track to the canteen, talking over steaming dishes about the gaokao and about life, or about small happinesses, greasy mouths meeting beaming faces — looking back, it feels like a frame of youth frozen in time: two people getting to know each other, two youths, simple and unburdened.</p>
+      <p>The last time we met was last June. High summer. I carried my camera to take photos of you. You were about to sit the gaokao, and we were about to part. Your dormitory was on the top floor, with a perfect view of the dusk sky woven in indigo and crimson.</p>
+      <p>I told you I had prepared a song — Eason Chan's "Ten Years" — because although we hadn't known each other ten years, the depth of our conversations felt like more than ten. When the line "it's just the time to part" came, I deliberately skipped the word "part," to soften the goodbye. You noticed, and reminded me that without "part" the song wasn't complete. My throat tightened for no reason. Yes — this parting was the farewell graduation had ordained, and I could only sing on, resigned. The lonely clouds watched me; the silent teaching building watched me; the cool breeze kissed my young throat; you turned to me with eyes half lost in the music. The sky darkened. The song ended. All we could do was say goodbye in an embrace that was not allowed to linger.</p>
+      <p>Back then I wished you everything you hoped for, and looked forward to seeing your name on the honor board. Later, in the lingering warmth of that summer, I watched my hope become real — you went to Peking University, to study the biology you love.</p>
+      <p>Separated by distance, we wrote letters occasionally; mostly we sent messages. You often encouraged me — to keep holding onto the literature I love, to enter writing competitions. You mailed me photographs: flowers blooming in Yanyuan, ripples on Weiming Lake. <strong>On that somewhat dark road of my final year, you were the light I could actually hold.</strong></p>
+      <p>I once told you: whichever university you go to, that is where I will go. And I quietly worked toward it.</p>
+      <p>But I broke my word. Or perhaps I simply never had what it takes to enter Peking University. The gaokao did not reunite us at Yanyuan.</p>
+      <p>You said it was just as well. In your letter you told me: although you had hoped we could share the glory at Yanyuan together, you wanted me to understand that what suits me matters more — so let us both let go. You learned of all my setbacks along the gaokao road, yet left only one line: "I won't go over them with you one by one" — telling me to throw the troubling past beyond the clouds and begin a brand-new life.</p>
+      <p>Yes. This is a brand-new life. A brand-new eighteen, brand-new days of study. I did not chase the light and shadow of literature; I chose the long road of medicine instead. You said that as long as I choose what I love, you will support me. And in this brand-new life there is you — someone who survived the sifting tides of old times and remained. I am so fortunate.</p>
+      <p>In the remainder of summer, I count what remains. I still miss the warmth of last summer, and I vainly try to catch more traces of the other people who remain in my memory. But time slips through my palms and escapes, leaving me standing silent.</p>
+      <p>Not long ago I returned to my old school. Summer's lingering warmth was still there; the setting sun spread across the orange-red rubber track, gold flowing everywhere. Two girls of about the same age were running, drenched in sweat, smiling brightly. Their shadows, stretched long by the sunlight, melted into the streaming light like an ink painting. Tired from running, they walked on inside the long scroll of the painting, singing freely as they went.</p>
+      <p>Of course, that was not us.</p>
+      <p><strong>But — why was it not us?</strong></p>
+      <p>I stood there wondering quietly. Then a photo from you slid across my phone screen — Yanyuan in bloom again. I raised my camera, captured the two girls strolling on the track, tapped, and sent it.</p>
+      <p>Perhaps hearts really do rhyme, because you replied almost at once:</p>
+      <blockquote>I miss the old days too. But the future is longer.</blockquote>
+      <p>And I thought: this time, perhaps I have caught the remainder of summer.</p>
+    `
+  }
 ];
 
 // Function to get blog posts (with optional limit)
