@@ -323,12 +323,12 @@ var blogPosts = [
 
   ,{
     id: 7,
-    title: "现在是秋日，你已经披上大衣了吧",
+    title: "余夏，余下",
     titleEn: "It's Autumn Now — You've Put On Your Coat, Haven't You?",
     category: "Life",
     date: "2026-10-17",
     author: "July",
-    image: "assets/img/blog-covers/green-06.png",
+    image: "assets/img/blog-covers/green-07.png",
     excerpt: "人生如茶，茶水呈上又倒尽，好在你是我握紧的、为数不多的、仍留身旁的那一盏……",
     excerptEn: "Life is like tea — poured and emptied, cup after cup. Lucky for me, you are one of the few cups I still hold in my hands...",
     content: `
