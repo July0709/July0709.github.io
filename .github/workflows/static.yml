@@ -33,6 +33,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Regenerate RSS feed
+        run: node scripts/generate-feed.js
+        # 部署前从 blog-data.js 现场重生成 feed.xml，
+        # 保证线上订阅源永远与文章数据一致，不依赖仓库内 feed.xml 是否已同步。
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

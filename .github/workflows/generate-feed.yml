@@ -35,6 +35,10 @@ jobs:
           if git diff --cached --quiet; then
             echo "feed.xml unchanged, nothing to commit."
           else
-            git commit -m "chore: auto-update RSS feed.xml [skip ci]"
+            # 不能带 [skip ci]：那会连部署 Pages 的 workflow 一起跳过，
+            # 导致新生成的 feed.xml 提交了却不部署，线上订阅源停滞。
+            # 本 workflow 有 paths 过滤（只认 blog-data.js / generate-feed.js），
+            # feed.xml 的提交不会再次触发本 workflow，因此不会死循环。
+            git commit -m "chore: auto-update RSS feed.xml"
             git push
           fi
